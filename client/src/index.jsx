@@ -6,8 +6,7 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Tabs, Tab} from 'material-ui/Tabs';
 
-// styles
-import style from '../../styles/components_index.css';
+import Landing from './components/landing/index.jsx';
 
 export default class App extends Component {
   constructor(props) {
@@ -19,26 +18,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className={style.main_card}>
-
-        <div className={style.panels_container}>
-          <div className={style.logo_container}>
-            LOGO
-          </div>
-          <div className={style.panels_outer_container}>
-            <div className={style.user_panel}>
-              PANEL
-            </div>
-          </div>
-          <div className={style.panel_view_controls}>
-            PANEL CONTROLS
-          </div>
-        </div>
-
-        <div className={style.dynamic_container}>
-          DYNAMIC
-        </div>
-      </div>
+      <Landing />
     )
   }
 }
