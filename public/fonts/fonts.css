@@ -1,29 +1,29 @@
 @font-face {
   font-family: GothamPro Black;
-  src: url('/styles/fonts/GothamProBlack.ttf');
+  src: url('/public/fonts/Gotham/GothamProBlack.ttf');
 }
 
 @font-face {
   font-family: GothamPro Bold;
-  src: url('/styles/fonts/GothamProBold.ttf');
+  src: url('/public/fonts/Gotham/GothamProBold.ttf');
 }
 
 @font-face {
   font-family: GothamPro Italic;
-  src: url('/styles/fonts/GothamProItalic.ttf');
+  src: url('/public/fonts/Gotham/GothamProItalic.ttf');
 }
 
 @font-face {
   font-family: GothamPro Light;
-  src: url('/styles/fonts/GothamProLight.ttf');
+  src: url('/public/fonts/Gotham/GothamProLight.ttf');
 }
 
 @font-face {
   font-family: GothamPro Medium;
-  src: url('/styles/fonts/GothamProMedium.ttf');
+  src: url('/public/fonts/Gotham/GothamProMedium.ttf');
 }
 
 @font-face {
   font-family: GothamPro Regular;
-  src: url('/styles/fonts/GothamProRegular.ttf');
+  src: url('/public/fonts/Gotham/GothamProRegular.ttf');
 }
