@@ -1,0 +1,19 @@
+{
+  "name": "internetjournal",
+  "version": "1.0.0",
+  "description": "Academic Internet Journal",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yessengerey/internet-journal.git"
+  },
+  "author": "Gary Bolatov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yessengerey/internet-journal/issues"
+  },
+  "homepage": "https://github.com/Yessengerey/internet-journal#readme"
+}
