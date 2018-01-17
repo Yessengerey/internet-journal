@@ -15,6 +15,44 @@ export default class Landing extends Component {
     this.state = {
       panel: 0
     }
+
+    this.teacherPanelButtonClickHandler = this.teacherPanelButtonClickHandler.bind(this);
+    this.studentPanelButtonClickHandler = this.studentPanelButtonClickHandler.bind(this);
+    this.contactUsPanelButtonClickHandler = this.contactUsPanelButtonClickHandler.bind(this);
+
+  }
+
+  teacherPanelButtonClickHandler() {
+    // if ( document.getElementById(style.inkbar_container).classList.contains(style.slideToTeacher) ) {
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToTeacher);
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToStudent);
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToContact);
+      document.getElementById(style.inkbar_container).classList.add(style.slideToTeacher);
+    // } else {
+    //   document.getElementById(style.inkbar_container).classList.add(style.slideToTeacher);
+    // }
+  }
+
+  studentPanelButtonClickHandler() {
+    // if ( document.getElementById(style.inkbar_container).classList.contains(style.slideToStudent) ) {
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToTeacher);
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToStudent);
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToContact);
+      document.getElementById(style.inkbar_container).classList.add(style.slideToStudent);
+    // } else {
+    //   document.getElementById(style.inkbar_container).classList.add(style.slideToStudent);
+    // }
+  }
+
+  contactUsPanelButtonClickHandler() {
+    // if ( document.getElementById(style.inkbar_container).classList.contains(style.slideToContact) ) {
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToTeacher);
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToStudent);
+      document.getElementById(style.inkbar_container).classList.remove(style.slideToContact);
+      document.getElementById(style.inkbar_container).classList.add(style.slideToContact);
+    // } else {
+    //   document.getElementById(style.inkbar_container).classList.add(style.slideToContact);
+    // }
   }
 
   render() {
@@ -31,7 +69,23 @@ export default class Landing extends Component {
             </div>
           </div>
           <div className={style.panel_view_controls}>
-            PANEL CONTROLS
+            <div className={style.panel_view_buttons}>
+              <div id={style.student_panel_button}
+                onClick={this.studentPanelButtonClickHandler}>
+                <span>ученикам и родителям</span>
+              </div>
+              <div id={style.teacher_panel_button}
+                onClick={this.teacherPanelButtonClickHandler}>
+                <span>учебным заведениям</span>
+              </div>
+              <div id={style.contact_us_panel_button}
+                onClick={this.contactUsPanelButtonClickHandler}>
+                <span>поддержка и обратная связь</span>
+              </div>
+            </div>
+            <div id={style.inkbar_container}>
+              <hr className={style.inkbar}/>
+            </div>
           </div>
         </div>
 

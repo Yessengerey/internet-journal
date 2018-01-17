@@ -30,5 +30,60 @@
 }
 
 .panel_view_controls {
-  height: 20%
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel_view_buttons {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.panel_view_buttons div {
+  text-align: center;
+  width: 33.33%;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel_view_buttons div span {
+  width: 160px;
+}
+
+#inkbar_container {
+  width: 33.33%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+.inkbar {
+  height: 5px;
+  width: 50%;
+  border: 0;
+  margin: 0;
+  background-color: #68438b;
+}
+
+.slideToStudent {
+  margin-left: 0%;
+}
+
+.slideToTeacher {
+  margin-left: 33.33%
+}
+
+.slideToContact {
+  margin-left: 66.66%;
 }
