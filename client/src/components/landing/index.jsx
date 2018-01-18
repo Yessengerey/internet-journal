@@ -9,11 +9,13 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 // styles
 import style from '../../../../styles/landing_index.css';
 
+import StudentPanel from './studentsParentPanel.jsx';
+
 export default class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      panel: 0
+      panelIndex: 0
     }
 
     this.panelButtonHandler = this.panelButtonHandler.bind(this);
@@ -36,7 +38,7 @@ export default class Landing extends Component {
 
     if (event.target.id === 'studentButton') {
       this.setState({
-        panel: 0
+        panelIndex: 0
       });
       teaElm.classList.remove(style.active_button);
       conElm.classList.remove(style.active_button);
@@ -45,7 +47,7 @@ export default class Landing extends Component {
       inkbarElm.classList.add(style.slideToStudent);
     } else if (event.target.id === 'teacherButton') {
       this.setState({
-        panel: 1
+        panelIndex: 1
       });
       stuElm.classList.remove(style.active_button);
       conElm.classList.remove(style.active_button);
@@ -54,7 +56,7 @@ export default class Landing extends Component {
       inkbarElm.classList.add(style.slideToTeacher);
     } else if (event.target.id === 'contactUsButton') {
       this.setState({
-        panel: 2
+        panelIndex: 2
       });
       stuElm.classList.remove(style.active_button);
       teaElm.classList.remove(style.active_button);
@@ -66,19 +68,23 @@ export default class Landing extends Component {
 
   render() {
 
+    let panelElement = <div></div>;
+
+    if (this.state.panelIndex === 0) {
+      panelElement = <StudentPanel />;
+    }
+
     return (
       <div className={style.main_card}>
 
         <div className={style.panels_container}>
 
           <div className={style.logo_container}>
-            LOGO
+            <img src='public/images/logo.png'/>
           </div>
 
           <div className={style.panels_outer_container}>
-            <div className={style.user_panel}>
-              PANEL
-            </div>
+              {panelElement}
           </div>
 
           <div className={style.panel_view_controls}>
