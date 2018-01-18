@@ -9,9 +9,15 @@ export default class StudentPanel extends Component {
     super(props);
   }
 
+
+  componentWillUnmount() {
+    console.log('HERE');
+    document.getElementById(style.panel_outer_container).classList.add(style.disappear);
+  }
+
   render() {
     return (
-      <div className={style.panel_outer_container}>
+      <div id={style.panel_outer_container}>
 
         <div className={style.panel_header}>
           <div className={style.panel_header_message}>

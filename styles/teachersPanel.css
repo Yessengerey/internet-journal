@@ -44,8 +44,8 @@
   border: 1px solid darkgrey;
   border-radius: 10px;
   height: 30px;
-  width: 60%;
   padding: 0 20px;
+  width: 60%;
   font-size: 15px;
   font-family: 'GothamPro Light';
 }
@@ -69,8 +69,4 @@
 .submit_button:focus {
   outline: none;
   opacity: 0.5;
-}
-
-.disappear {
-  margin-left: 25%;
 }

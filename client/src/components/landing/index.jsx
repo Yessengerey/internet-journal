@@ -10,6 +10,8 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import style from '../../../../styles/landing_index.css';
 
 import StudentPanel from './studentsParentPanel.jsx';
+import TeachersPanel from './teachersPanel.jsx';
+import ContactUsPanel from './contactUsPanel.jsx';
 
 export default class Landing extends Component {
   constructor(props) {
@@ -36,7 +38,7 @@ export default class Landing extends Component {
     inkbarElm.classList.remove(style.slideToStudent);
     inkbarElm.classList.remove(style.slideToContact);
 
-    if (event.target.id === 'studentButton') {
+    if (event.target.id === 'studentButton' || event.target.id === 'studentPanelButton') {
       this.setState({
         panelIndex: 0
       });
@@ -45,7 +47,7 @@ export default class Landing extends Component {
 
       stuElm.classList.add(style.active_button);
       inkbarElm.classList.add(style.slideToStudent);
-    } else if (event.target.id === 'teacherButton') {
+    } else if (event.target.id === 'teacherButton' || event.target.id === 'teacherPanelButton') {
       this.setState({
         panelIndex: 1
       });
@@ -54,7 +56,7 @@ export default class Landing extends Component {
 
       teaElm.classList.add(style.active_button);
       inkbarElm.classList.add(style.slideToTeacher);
-    } else if (event.target.id === 'contactUsButton') {
+    } else if (event.target.id === 'contactUsButton' || event.target.id === 'contactUsPanelButton') {
       this.setState({
         panelIndex: 2
       });
@@ -72,6 +74,10 @@ export default class Landing extends Component {
 
     if (this.state.panelIndex === 0) {
       panelElement = <StudentPanel />;
+    } else if (this.state.panelIndex === 1) {
+      panelElement = <TeachersPanel />;
+    } else if (this.state.panelIndex === 2) {
+      panelElement = <ContactUsPanel />;
     }
 
     return (
@@ -91,17 +97,17 @@ export default class Landing extends Component {
 
             <div className={style.panel_view_buttons}>
 
-              <div
+              <div id='studentPanelButton'
                 onClick={this.panelButtonHandler}>
                 <span id='studentButton'>ученикам и родителям</span>
               </div>
 
-              <div
+              <div id='teacherPanelButton'
                 onClick={this.panelButtonHandler}>
                 <span id='teacherButton'>учебным заведениям</span>
               </div>
 
-              <div
+              <div id='contactUsPanelButton'
                 onClick={this.panelButtonHandler}>
                 <span id='contactUsButton'>поддержка и обратная связь</span>
               </div>
