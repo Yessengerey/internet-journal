@@ -73,7 +73,7 @@ export default class Landing extends Component {
     let panelElement = <div></div>;
 
     if (this.state.panelIndex === 0) {
-      panelElement = <StudentPanel />;
+      panelElement = <StudentPanel handleStageChange={this.props.handleStageChange}/>;
     } else if (this.state.panelIndex === 1) {
       panelElement = <TeachersPanel />;
     } else if (this.state.panelIndex === 2) {

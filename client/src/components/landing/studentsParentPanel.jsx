@@ -7,11 +7,16 @@ import style from '../../../../styles/studentsParentPanel.css';
 export default class StudentPanel extends Component {
   constructor(props) {
     super(props);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.handleStageChange('students');
+  }
 
   componentWillUnmount() {
-    console.log('HERE');
     document.getElementById(style.panel_outer_container).classList.add(style.disappear);
   }
 
@@ -25,7 +30,8 @@ export default class StudentPanel extends Component {
           </div>
         </div>
 
-        <form className={style.form_container}>
+        <form className={style.form_container}
+          onSubmit={this.handleSubmit}>
           <input
             className={style.input_field}
             type='text'
