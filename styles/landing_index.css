@@ -57,6 +57,11 @@
 
 .panel_view_buttons div span {
   width: 160px;
+  opacity: 0.5;
+}
+
+.active_button {
+  opacity: 1 !important;
 }
 
 #inkbar_container {
@@ -82,7 +87,7 @@
 }
 
 .slideToTeacher {
-  margin-left: 33.33%
+  margin-left: 33.33%;
 }
 
 .slideToContact {
