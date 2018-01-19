@@ -13,14 +13,24 @@ import StudentPanel from './studentsParentPanel.jsx';
 import TeachersPanel from './teachersPanel.jsx';
 import ContactUsPanel from './contactUsPanel.jsx';
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 export default class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      panelIndex: 0
+      panelIndex: 0,
+      transitionEnd: true
     }
 
+    this.handleTransitionEnd = this.handleTransitionEnd.bind(this);
     this.panelButtonHandler = this.panelButtonHandler.bind(this);
+  }
+
+  handleTransitionEnd() {
+    this.setState({
+      transitionEnd: true
+    })
   }
 
   componentDidMount() {
@@ -40,7 +50,8 @@ export default class Landing extends Component {
 
     if (event.target.id === 'studentButton' || event.target.id === 'studentPanelButton') {
       this.setState({
-        panelIndex: 0
+        panelIndex: 0,
+        transitionEnd: false
       });
       teaElm.classList.remove(style.active_button);
       conElm.classList.remove(style.active_button);
@@ -49,7 +60,8 @@ export default class Landing extends Component {
       inkbarElm.classList.add(style.slideToStudent);
     } else if (event.target.id === 'teacherButton' || event.target.id === 'teacherPanelButton') {
       this.setState({
-        panelIndex: 1
+        panelIndex: 1,
+        transitionEnd: false
       });
       stuElm.classList.remove(style.active_button);
       conElm.classList.remove(style.active_button);
@@ -58,7 +70,8 @@ export default class Landing extends Component {
       inkbarElm.classList.add(style.slideToTeacher);
     } else if (event.target.id === 'contactUsButton' || event.target.id === 'contactUsPanelButton') {
       this.setState({
-        panelIndex: 2
+        panelIndex: 2,
+        transitionEnd: false
       });
       stuElm.classList.remove(style.active_button);
       teaElm.classList.remove(style.active_button);
@@ -72,12 +85,12 @@ export default class Landing extends Component {
 
     let panelElement = <div></div>;
 
-    if (this.state.panelIndex === 0) {
-      panelElement = <StudentPanel handleStageChange={this.props.handleStageChange}/>;
-    } else if (this.state.panelIndex === 1) {
-      panelElement = <TeachersPanel />;
-    } else if (this.state.panelIndex === 2) {
-      panelElement = <ContactUsPanel />;
+    if (this.state.panelIndex === 0 && this.state.transitionEnd) {
+      panelElement = <StudentPanel key='studentpanel' handleTransitionEnd={this.handleTransitionEnd} handleStageChange={this.props.handleStageChange}/>
+    } else if (this.state.panelIndex === 1 && this.state.transitionEnd) {
+      panelElement = <TeachersPanel key='teacherpanel' handleTransitionEnd={this.handleTransitionEnd}/>;
+    } else if (this.state.panelIndex === 2 && this.state.transitionEnd) {
+      panelElement = <ContactUsPanel key='contactpanel' handleTransitionEnd={this.handleTransitionEnd}/>;
     }
 
     return (
@@ -90,7 +103,13 @@ export default class Landing extends Component {
           </div>
 
           <div className={style.panels_outer_container}>
+            <ReactCSSTransitionGroup
+              className={style.animation_container}
+              transitionName='panel-transition'
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={600}>
               {panelElement}
+            </ReactCSSTransitionGroup>
           </div>
 
           <div className={style.panel_view_controls}>

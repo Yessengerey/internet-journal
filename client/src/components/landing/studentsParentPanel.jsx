@@ -11,13 +11,13 @@ export default class StudentPanel extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount () {
+		this.props.handleTransitionEnd();
+	}
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.handleStageChange('students');
-  }
-
-  componentWillUnmount() {
-    document.getElementById(style.panel_outer_container).classList.add(style.disappear);
   }
 
   render() {

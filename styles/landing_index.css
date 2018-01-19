@@ -103,3 +103,11 @@
 .slideToContact {
   margin-left: 66.66%;
 }
+
+.animation_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 50%;
+}

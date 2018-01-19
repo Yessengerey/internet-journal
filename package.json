@@ -28,15 +28,12 @@
     "body-parser": "^1.18.2",
     "css-loader": "^0.28.8",
     "express": "^4.16.2",
-    "history": "^4.7.2",
     "material-ui": "^0.20.0",
     "nodemon": "^1.14.11",
     "path": "^0.12.7",
     "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "save": "^2.3.2",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   }

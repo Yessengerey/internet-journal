@@ -9,6 +9,10 @@ export default class TeachersPanel extends Component {
     super(props);
   }
 
+  componentWillUnmount () {
+		this.props.handleTransitionEnd();
+	}
+
   render() {
     return (
       <div id={style.panel_outer_container}>
