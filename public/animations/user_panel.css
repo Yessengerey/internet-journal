@@ -5,7 +5,7 @@
 
 .panel-transition-enter.panel-transition-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-in;
+  transition: opacity 200ms ease-in;
 }
 
 .panel-transition-leave {
@@ -14,5 +14,5 @@
 
 .panel-transition-leave.panel-transition-leave-active {
   opacity: 0;
-  transition: opacity 300ms ease-in;
+  transition: opacity 200ms ease-in;
 }

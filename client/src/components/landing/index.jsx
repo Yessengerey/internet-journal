@@ -106,8 +106,8 @@ export default class Landing extends Component {
             <ReactCSSTransitionGroup
               className={style.animation_container}
               transitionName='panel-transition'
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={600}>
+              transitionEnterTimeout={200}
+              transitionLeaveTimeout={300}>
               {panelElement}
             </ReactCSSTransitionGroup>
           </div>
@@ -141,7 +141,7 @@ export default class Landing extends Component {
         </div>
 
         <div className={style.dynamic_container}>
-          DYNAMIC
+
         </div>
       </div>
     )
