@@ -8,7 +8,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 
 import Landing from './containers/landing/index.jsx';
 
-import StudentsParents from './components/students/index.jsx';
+import StudentsParents from './containers/students/index.jsx';
 
 export default class App extends Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import ControlPanel from './topControlPanel.jsx';
-import DataGrid from '../../containers/datagrid.jsx';
+import ControlPanel from '../../components/utility/topControlPanel.jsx';
+import DataGrid from '../../components/utility/datagrid.jsx';
 
 export default class StudentsParents extends Component {
   constructor(props) {

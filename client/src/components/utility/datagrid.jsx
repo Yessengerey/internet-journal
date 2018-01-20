@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 import ReactDataSheet from 'react-datasheet';
-import style from '../../../styles/datagrid.css';
+import style from '../../../../styles/datagrid.css';
+
+
 export default class DataGrid extends Component {
   constructor(props) {
     super(props);
