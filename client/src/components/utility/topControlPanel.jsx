@@ -9,7 +9,7 @@ import IconButton from 'material-ui/IconButton';
 import ExitIcon from 'material-ui/svg-icons/action/exit-to-app';
 
 // styles
-import style from '../../../../styles/topControlPanel.css';
+import style from '../../../../styles/utility/topControlPanel.css';
 
 var buttonIds = [
   'scheduleButton',
