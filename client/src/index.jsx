@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Tabs, Tab} from 'material-ui/Tabs';
 
-import Landing from './components/landing/index.jsx';
+import Landing from './containers/landing/index.jsx';
 
 import StudentsParents from './components/students/index.jsx';
 

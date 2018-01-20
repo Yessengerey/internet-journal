@@ -10,6 +10,25 @@
   box-shadow: 0 0 20px 9px #a7a7a7;
 }
 
+.panel_header {
+  height: 15%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid darkgrey;
+}
+
+.panel_header_message {
+  padding: 0 20px;
+  background-color: #f9f9f9;
+  margin-bottom: -7px;
+  font-size: 13px;
+  color: darkgrey;
+  font-family: 'GothamPro Light';
+}
+
 .form_container {
   height: 90%;
   width: 100%;
@@ -34,22 +53,6 @@
   outline: none;
 }
 
-textarea {
-  resize: none;
-  width: 66%;
-  padding: 10px;
-  font-size: 15px;
-  border-radius: 10px;
-  border: 1px solid;
-  border-color: darkgrey;
-  font-family: 'GothamPro Light';
-  background-color: #f9f9f9;
-}
-
-textarea:focus {
-  outline: none;
-}
-
 .submit_button {
   line-height: 30px;
   border: none;
@@ -65,4 +68,20 @@ textarea:focus {
 .submit_button:focus {
   outline: none;
   opacity: 0.5;
+}
+
+textarea {
+  resize: none;
+  width: 66%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: darkgrey;
+  font-family: 'GothamPro Light';
+  background-color: #f9f9f9;
+}
+
+textarea:focus {
+  outline: none;
 }
