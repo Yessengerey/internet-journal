@@ -118,7 +118,9 @@ export default class ControlPanel extends Component {
             </span>
           </div>
 
-          <IconButton>
+          <IconButton
+            tooltip='Выйти'
+            tooltipPosition='bottom-right'>
             <ExitIcon/>
           </IconButton>
         </div>
