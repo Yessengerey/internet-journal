@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ControlPanel from './topControlPanel.jsx';
+import DataGrid from '../../containers/datagrid.jsx';
 
 export default class StudentsParents extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class StudentsParents extends Component {
       <div style={{height: '100%', backgroundColor: '#F9F9F9'}}>
         <ControlPanel />
         STUDENTS
+        <DataGrid />
       </div>
     )
   }

@@ -1,0 +1,13 @@
+.grid_outer_container {
+  width: 70%;
+  border-radius: 20px;
+}
+
+.grid_inner_container {
+  width: 100%;
+}
+
+.grid_inner_container td {
+  background-color: rgb(249, 249, 249);
+  text-align: center !important;
+}

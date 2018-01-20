@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import style from '../../../../styles/studentsParentPanel.css';
+import style from '../../../../styles/landing/studentsParentPanel.css';
 
 export default class StudentPanel extends Component {
   constructor(props) {

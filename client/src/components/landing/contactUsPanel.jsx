@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import style from '../../../../styles/contactUsPanel.css';
+import style from '../../../../styles/landing/contactUsPanel.css';
 
 export default class ContactUsPanel extends Component {
   constructor(props) {

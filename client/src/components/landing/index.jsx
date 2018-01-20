@@ -7,7 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Tabs, Tab} from 'material-ui/Tabs';
 
 // styles
-import style from '../../../../styles/landing_index.css';
+import style from '../../../../styles/landing/landing_index.css';
 
 import StudentPanel from './studentsParentPanel.jsx';
 import TeachersPanel from './teachersPanel.jsx';
