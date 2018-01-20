@@ -33,10 +33,16 @@ export default class ControlPanel extends Component {
     this.toggleActiveButton = this.toggleActiveButton.bind(this);
   }
 
+  componentDidMount() {
+    document.getElementById(buttonIds[0]).classList.add(style.panel_button_on_active);
+  }
+
   toggleActiveButton(id, buttonIds) {
     for (var i = 0; i < buttonIds.length; i++) {
-      if (id === buttonIds[i]) {
+      if (id === buttonIds[i] && !document.getElementById(buttonIds[i]).classList.contains(style.panel_button_on_active)) {
         document.getElementById(buttonIds[i]).classList.add(style.panel_button_on_active);
+      } else if (id === buttonIds[i] && document.getElementById(buttonIds[i]).classList.contains(style.panel_button_on_active)) {
+        // do nothing...
       } else {
         document.getElementById(buttonIds[i]).classList.remove(style.panel_button_on_active);
       }
@@ -45,7 +51,6 @@ export default class ControlPanel extends Component {
 
   handleButtonClick(e) {
     e.preventDefault();
-    console.log(e.target.id);
     this.setState({
       activeButton: e.target.id
     }, () => {
