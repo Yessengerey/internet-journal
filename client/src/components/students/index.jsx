@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import ControlPanel from './topControlPanel.jsx';
+
 export default class StudentsParents extends Component {
   constructor(props) {
     super(props);
@@ -7,7 +9,8 @@ export default class StudentsParents extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{height: '100%', backgroundColor: '#F9F9F9'}}>
+        <ControlPanel />
         STUDENTS
       </div>
     )
