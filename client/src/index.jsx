@@ -26,7 +26,14 @@ export default class App extends Component {
         '8A', '8B', '8C',
         '9A', '9B', '9C',
         '10A', '10B', '10C',
-        '11A', '11B', '11C']
+        '11A', '11B', '11C'],
+      shifts: [
+        'I',
+        'II',
+        'III',
+        'IV',
+        'V'
+      ]
     }
 
     this.handleStageChange = this.handleStageChange.bind(this);
@@ -46,7 +53,7 @@ export default class App extends Component {
         mainElement = <div style={{margin: '50px', height: '90%'}}><Landing handleStageChange={this.handleStageChange}/></div>
         break;
       case 'students':
-        mainElement = <div style={{height: '100%'}}><StudentsParents grades={this.state.grades}/></div>
+        mainElement = <div style={{height: '100%'}}><StudentsParents grades={this.state.grades} shifts={this.state.shifts}/></div>
         break;
     }
     return (

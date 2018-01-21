@@ -30,6 +30,20 @@ export default class StudentsParents extends Component {
         [{value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}],
         [{value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}],
         [{value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}]
+      ],
+      alarmsData: [
+        [
+          {value: 1, readOnly: true},
+          {value: 2, readOnly: true},
+          {value: 3, readOnly: true},
+          {value: 4, readOnly: true},
+          {value: 5, readOnly: true},
+          {value: 6, readOnly: true},
+          {value: 7, readOnly: true},
+          {value: 8, readOnly: true},
+        ],
+        [{value: 'С 08:00'}, {value: 'С 08:50'}, {value: 'С 09:40'}, {value: 'С 10:35'}, {value: 'С 11:35'}, {value: 'С 12:25'}, {value: 'С 13:15'}, {value: 'С 14:05'}],
+        [{value: 'До 08:40'}, {value: 'До 09:35'}, {value: 'До 10:25'}, {value: 'До 11:20'}, {value: 'До 12:20'}, {value: 'До 13:10'}, {value: 'До 14:00'}, {value: 'До 14:50'}]
       ]
     }
   }
@@ -44,6 +58,12 @@ export default class StudentsParents extends Component {
           numberedRows={true}
           grades={this.props.grades}
           data={this.state.classesData}/>
+        <DataGrid
+          title={this.state.secondTableTitle}
+          type={'alarms'}
+          numberedRows={false}
+          shifts={this.props.shifts}
+          data={this.state.alarmsData}/>
       </div>
     )
   }
