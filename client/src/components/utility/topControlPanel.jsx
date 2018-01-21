@@ -124,6 +124,8 @@ export default class ControlPanel extends Component {
           </div>
 
           <IconButton
+            className={style.exit_button}
+            hoveredStyle={{  boxShadow: '0 0 10px #c5c5c5'}}
             tooltip='Выйти'
             tooltipPosition='bottom-right'>
             <ExitIcon/>

@@ -29,6 +29,7 @@
 
 .panel_buttons span:hover {
   cursor: pointer;
+  box-shadow: 0 0 5px #c5c5c5;
 }
 
 .panel_buttons span:active {
@@ -45,4 +46,8 @@
 
 .logo_container img {
   width: 100%;
+}
+
+.exit_button {
+  border-radius: 50%;
 }
