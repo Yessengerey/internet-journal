@@ -1,6 +1,27 @@
+.table_title_container {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.table_title_container span {
+  margin-bottom: 10px;
+}
+
+.interactive_element {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .grid_outer_container {
   width: 70%;
   border-radius: 20px;
+  margin-bottom: 40px;
 }
 
 .grid_inner_container {

@@ -3,25 +3,74 @@ import React, { Component } from 'react';
 import ReactDataSheet from 'react-datasheet';
 import style from '../../../../styles/utility/datagrid.css';
 
-import Popover from 'material-ui/Popover';
-import Menu from 'material-ui/Menu';
+import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
-
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class DataGrid extends Component {
   constructor(props) {
     super(props);
+
+    // data is for datagrid content
     this.state = {
-      data: this.props.data
+      data: this.props.data,
+      menuItems: undefined,
+      grades: undefined,
+      shifts: undefined,
+      date: undefined,
+      focusValue: 0
     }
 
-    this.interactiveEnding = this.interactiveEnding.bind(this);
+    this.interactiveElement = this.interactiveElement.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  interactiveEnding() {
+  handleChange(e, index, value) {
+    this.setState({
+      focusValue: value
+    })
+  }
+
+  interactiveElement() {
+    let interactiveElement = <div></div>;
+    let ending = <span></span>;
+
+    if (this.props.type === 'classes') {
+      ending = <span>Класса</span>;
+    } else if (this.props.type === 'alarms') {
+      ending = <span>Смены</span>;
+    }
+
+    interactiveElement =
+      <div className={style.interactive_element}>
+        <DropDownMenu maxHeight={300} value={this.state.focusValue} onChange={this.handleChange}>
+          {this.state.menuItems}
+        </DropDownMenu>
+        {ending}
+      </div>
+
+    return <MuiThemeProvider>{interactiveElement}</MuiThemeProvider>
   }
 
   componentWillMount() {
+    let items = [];
+    let existingItems = [];
+
+    if (this.props.grades) {
+      existingItems = this.props.grades.slice(0);
+    } else if (this.props.shifts) {
+      existingItems = this.props.shifts.slice(0);
+    }
+
+    for (let i = 0; i < existingItems.length; i++) {
+      items.push(<MenuItem value={i} key={i} primaryText={existingItems[i]} />)
+    }
+
+    this.setState({
+      menuItems: items
+    })
+
+
     if (this.props.numberedRows) {
       let newData = this.state.data;
       newData[0].unshift({readOnly: true, value: '№'});
@@ -33,11 +82,20 @@ export default class DataGrid extends Component {
       this.setState({
         data: newData
       })
+    } else if (this.props.type === 'alarms') {
+      let newData = this.state.data;
+      newData[0].unshift({readOnly: true, value: ''});
+
+      newData[1].unshift({readOnly: true, value: 'С:'});
+      newData[2].unshift({readOnly: true, value: 'ДО:'});
+
+      this.setState({
+        data: newData
+      })
     }
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('new state', nextProps);
     if (JSON.stringify(nextProps) !== JSON.stringify(this.props)) {
       this.setState(nextProps)
     }
@@ -47,7 +105,7 @@ export default class DataGrid extends Component {
     return (
         <div className={style.table_container}>
           <div className={style.table_title_container}>
-            {this.props.title} <a></a>
+            <span>{this.props.title}</span> {this.interactiveElement()}
           </div>
 
           <div className={style.grid_outer_container}>
