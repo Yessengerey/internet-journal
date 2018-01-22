@@ -148,7 +148,7 @@ export default class DataGrid extends Component {
               overflow='clip'
               data={this.state.data}
               valueRenderer={(cell) => cell.value}
-              onContextMenu={(e, cell, i, j) => cell.readOnly ? ()=>{console.log('HELLO');e.preventDefault();} : null}
+              onContextMenu={(e, cell, i, j) => cell.readOnly ? ()=>{e.preventDefault(); : null}
               onChange={(modifiedCell, rowI, colJ, value) =>
                 this.setState({
                   data: this.state.data.map((row) =>
