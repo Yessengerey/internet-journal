@@ -12,12 +12,12 @@ import ExitIcon from 'material-ui/svg-icons/action/exit-to-app';
 import style from '../../../../styles/utility/topControlPanel.css';
 
 var buttonIds = [
-  0,
-  1,
-  2,
-  3,
-  4,
-  5
+  '0',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5'
 ];
 
 export default class ControlPanel extends Component {

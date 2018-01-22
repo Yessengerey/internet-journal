@@ -45,17 +45,20 @@ export default class StudentsParents extends Component {
     return (
       <div className={style.students_main_container}>
         <ControlPanel handleViewChange={this.handleViewChange}/>
-        <SwipeableViews
-          index={this.state.currentView}
-          onChangeIndex={this.handleViewChange}
-        >
-          <Schedule grades={this.props.grades} shifts={this.props.shifts}/>
-          <Journal quarters={this.props.quarters}/>
-          <Homework />
-          <Syllabus quarters={this.props.quarters}/>
-          <News />
-          <Messages />
-        </SwipeableViews>
+        <div style={{width: '100%'}}>
+          <SwipeableViews
+            index={this.state.currentView}
+            onChangeIndex={this.handleViewChange}
+            >
+              <Schedule grades={this.props.grades} shifts={this.props.shifts}/>
+              <Journal quarters={this.props.quarters}/>
+              <Homework />
+              <Syllabus quarters={this.props.quarters}/>
+              <News />
+              <Messages />
+            </SwipeableViews>
+
+        </div>
       </div>
     )
   }
