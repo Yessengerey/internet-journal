@@ -39,6 +39,7 @@
     "react-date-range-updated": "^1.0.1",
     "react-dates": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-swipeable-views": "^0.12.12",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   }

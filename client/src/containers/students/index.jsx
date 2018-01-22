@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import ControlPanel from '../../components/utility/topControlPanel.jsx';
 
+import SwipeableViews from 'react-swipeable-views';
+
 import style from '../../../../styles/students/students_index.css';
 
 import Schedule from './schedule.jsx';
@@ -16,7 +18,7 @@ export default class StudentsParents extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentView: 'schedule',
+      currentView: 0
     }
 
     this.handleViewChange = this.handleViewChange.bind(this);
@@ -24,26 +26,36 @@ export default class StudentsParents extends Component {
 
   handleViewChange(nextView) {
     this.setState({
-      currentView: nextView
+      currentView: parseInt(nextView)
     })
   }
 
   render() {
-    let views = {
-      schedule: <Schedule grades={this.props.grades} shifts={this.props.shifts}/>,
-      journal: <Journal quarters={this.props.quarters}/>,
-      homework: <Homework />,
-      syllabus: <Syllabus quarters={this.props.quarters}/>,
-      news: <News />,
-      messages: <Messages />
-    }
+    let views = [
+      <Schedule grades={this.props.grades} shifts={this.props.shifts}/>,
+      <Journal quarters={this.props.quarters}/>,
+      <Homework />,
+      <Syllabus quarters={this.props.quarters}/>,
+      <News />,
+      <Messages />
+    ]
 
     let viewElement = views[this.state.currentView];
 
     return (
       <div className={style.students_main_container}>
         <ControlPanel handleViewChange={this.handleViewChange}/>
-        {viewElement}
+        <SwipeableViews
+          index={this.state.currentView}
+          onChangeIndex={this.handleViewChange}
+        >
+          <Schedule grades={this.props.grades} shifts={this.props.shifts}/>
+          <Journal quarters={this.props.quarters}/>
+          <Homework />
+          <Syllabus quarters={this.props.quarters}/>
+          <News />
+          <Messages />
+        </SwipeableViews>
       </div>
     )
   }
