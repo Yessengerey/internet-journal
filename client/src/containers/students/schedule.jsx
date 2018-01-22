@@ -70,14 +70,14 @@ export default class Schedule extends Component {
           type={'classes'}
           numberedRows={true}
           width={'70%'}
-          grades={this.props.grades}
+          dropDownItems={this.props.grades}
           data={this.state.classesData}/>
         <DataGrid
           title={this.state.secondTableTitle}
           type={'alarms'}
           numberedRows={false}
           width={'70%'}
-          shifts={this.props.shifts}
+          dropDownItems={this.props.shifts}
           data={this.state.alarmsData}/>
         <DataGrid
           title={this.state.thirdTableTitle}

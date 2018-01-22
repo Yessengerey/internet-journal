@@ -45,7 +45,7 @@ export default class Syllabus extends Component {
           type={'syllabus'}
           numberedRows={true}
           width={'70%'}
-          quarters={this.props.quarters}
+          dropDownItems={this.props.quarters}
           data={this.state.data}/>
       </div>
     )

@@ -54,7 +54,7 @@ export default class Journal extends Component {
           type={'marks'}
           numberedRows={true}
           width={'90%'}
-          quarters={this.props.quarters}
+          dropDownItems={this.props.quarters}
           data={this.state.data}/>
       </div>
     )

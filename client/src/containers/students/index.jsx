@@ -31,17 +31,6 @@ export default class StudentsParents extends Component {
   }
 
   render() {
-    let views = [
-      <Schedule grades={this.props.grades} shifts={this.props.shifts}/>,
-      <Journal quarters={this.props.quarters}/>,
-      <Homework />,
-      <Syllabus quarters={this.props.quarters}/>,
-      <News />,
-      <Messages />
-    ]
-
-    let viewElement = views[this.state.currentView];
-
     return (
       <div className={style.students_main_container}>
         <ControlPanel handleViewChange={this.handleViewChange}/>
@@ -52,9 +41,9 @@ export default class StudentsParents extends Component {
             >
               <Schedule grades={this.props.grades} shifts={this.props.shifts}/>
               <Journal quarters={this.props.quarters}/>
-              <Homework />
+              <Homework quarters={this.props.quarters} />
               <Syllabus quarters={this.props.quarters}/>
-              <News />
+              <News quarters={this.props.quarters} />
               <Messages />
             </SwipeableViews>
 

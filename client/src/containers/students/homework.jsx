@@ -45,7 +45,7 @@ export default class Homework extends Component {
           type={'homework'}
           numberedRows={true}
           width={'70%'}
-          quarters={this.props.quarters}
+          dropDownItems={this.props.quarters}
           data={this.state.data}/>
       </div>
     )
