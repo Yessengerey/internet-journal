@@ -9,6 +9,7 @@ import Homework from './homework.jsx';
 import Journal from './journal.jsx';
 import Messages from './messages.jsx';
 import News from './news.jsx';
+import Syllabus from './syllabus.jsx';
 
 // views: schedule, journal, homoework, syllabus, news, messages
 export default class StudentsParents extends Component {
@@ -16,7 +17,6 @@ export default class StudentsParents extends Component {
     super(props);
     this.state = {
       currentView: 'schedule',
-
     }
 
     this.handleViewChange = this.handleViewChange.bind(this);
@@ -30,8 +30,12 @@ export default class StudentsParents extends Component {
 
   render() {
     let views = {
-      schedule: <Schedule grade={this.props.grades} shifts={this.props.shifts}/>,
-      journal: <div>HELLO</div>
+      schedule: <Schedule grades={this.props.grades} shifts={this.props.shifts}/>,
+      journal: <Journal quarters={this.props.quarters}/>,
+      homework: <Homework />,
+      syllabus: <Syllabus />,
+      news: <News />,
+      messages: <Messages />
     }
 
     let viewElement = views[this.state.currentView];

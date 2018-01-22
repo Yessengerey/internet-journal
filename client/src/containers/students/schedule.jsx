@@ -69,18 +69,21 @@ export default class Schedule extends Component {
           title={this.state.firstTableTitle}
           type={'classes'}
           numberedRows={true}
+          width={'70%'}
           grades={this.props.grades}
           data={this.state.classesData}/>
         <DataGrid
           title={this.state.secondTableTitle}
           type={'alarms'}
           numberedRows={false}
+          width={'70%'}
           shifts={this.props.shifts}
           data={this.state.alarmsData}/>
         <DataGrid
           title={this.state.thirdTableTitle}
           type={'duties'}
           numberedRows={true}
+          width={'70%'}
           data={this.state.dutiesData}/>
       </div>
           )

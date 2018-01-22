@@ -52,9 +52,11 @@ export default class DataGrid extends Component {
       ending = <span>Класса</span>;
     } else if (this.props.type === 'alarms') {
       ending = <span>Смены</span>;
+    } else if (this.props.type === 'marks') {
+      ending = <span>Четверть</span>
     }
 
-    if (this.props.type === 'classes' || this.props.type === 'alarms') {
+    if (this.props.type === 'classes' || this.props.type === 'alarms' || this.props.type === 'marks') {
       interactiveElement =
         <div className={style.interactive_element}>
           <DropDownMenu maxHeight={300} value={this.state.focusValue} onChange={this.handleChange}>
@@ -81,8 +83,6 @@ export default class DataGrid extends Component {
   }
 
   componentWillMount() {
-
-
     let items = [];
     let existingItems = [];
 
@@ -90,6 +90,8 @@ export default class DataGrid extends Component {
       existingItems = this.props.grades.slice(0);
     } else if (this.props.shifts) {
       existingItems = this.props.shifts.slice(0);
+    } else if (this.props.quarters) {
+      existingItems = this.props.quarters.slice(0);
     }
 
     for (let i = 0; i < existingItems.length; i++) {
@@ -139,7 +141,7 @@ export default class DataGrid extends Component {
           </div>
 
           <div
-            id='DATA' className={style.grid_outer_container}>
+            id='DATA' className={style.grid_outer_container} style={{width: this.props.width}}>
             <ReactDataSheet
               className={style.grid_inner_container}
               overflow='clip'

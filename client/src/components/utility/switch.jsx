@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Journal extends Component {
+export default class Switch extends Component {
   constructor(props) {
     super(props);
   }
@@ -8,7 +8,7 @@ export default class Journal extends Component {
   render() {
     return (
       <div>
-        
+
       </div>
     )
   }
