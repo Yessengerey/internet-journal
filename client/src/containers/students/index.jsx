@@ -5,6 +5,10 @@ import ControlPanel from '../../components/utility/topControlPanel.jsx';
 import style from '../../../../styles/students/students_index.css';
 
 import Schedule from './schedule.jsx';
+import Homework from './homework.jsx';
+import Journal from './journal.jsx';
+import Messages from './messages.jsx';
+import News from './news.jsx';
 
 // views: schedule, journal, homoework, syllabus, news, messages
 export default class StudentsParents extends Component {
