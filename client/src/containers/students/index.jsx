@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ControlPanel from '../../components/utility/topControlPanel.jsx';
+import Footer from '../../components/utility/footer.jsx'
 
 import SwipeableViews from 'react-swipeable-views';
 
@@ -46,8 +47,8 @@ export default class StudentsParents extends Component {
               <News quarters={this.props.quarters} />
               <Messages />
             </SwipeableViews>
-
         </div>
+        <Footer handleViewChange={this.handleViewChange}/>
       </div>
     )
   }
