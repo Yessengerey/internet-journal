@@ -12,12 +12,12 @@ import ExitIcon from 'material-ui/svg-icons/action/exit-to-app';
 import style from '../../../../styles/utility/topControlPanel.css';
 
 var buttonIds = [
-  'scheduleButton',
-  'journalButton',
-  'homeworkButton',
-  'syllabusButton',
-  'newsButton',
-  'messagesButton'
+  'schedule',
+  'journal',
+  'homework',
+  'syllabus',
+  'news',
+  'messages'
 ];
 
 export default class ControlPanel extends Component {
@@ -57,19 +57,7 @@ export default class ControlPanel extends Component {
       this.toggleActiveButton(this.state.activeButton, buttonIds);
     })
 
-    if (e.target.id === 'scheduleButton') {
-
-    } else if (e.target.id === 'journalButton') {
-
-    } else if (e.target.id === 'homeworkButton') {
-
-    } else if (e.target.id === 'syllabusButton') {
-
-    } else if (e.target.id === 'newsButton') {
-
-    } else if (e.target.id === 'messagesButton') {
-
-    }
+    this.props.handleViewChange(e.target.id);
   }
 
   render() {
