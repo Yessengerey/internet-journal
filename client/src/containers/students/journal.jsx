@@ -53,7 +53,7 @@ export default class Journal extends Component {
           title={this.state.gridTitle}
           type={'marks'}
           numberedRows={true}
-          width={'100%'}
+          width={'90%'}
           quarters={this.props.quarters}
           data={this.state.data}/>
       </div>
