@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+// import 'react-dates/initialize';
+// import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+
+import DatePicker from 'material-ui/DatePicker';
 
 import ReactDataSheet from 'react-datasheet';
 import style from '../../../../styles/utility/datagrid.css';
@@ -6,6 +10,10 @@ import style from '../../../../styles/utility/datagrid.css';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import moment from 'moment';
+
+import { DateRange } from 'react-date-range-updated';
 
 export default class DataGrid extends Component {
   constructor(props) {
@@ -23,6 +31,11 @@ export default class DataGrid extends Component {
 
     this.interactiveElement = this.interactiveElement.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
+  }
+
+  handleDateChange(date) {
+    console.log(date);
   }
 
   handleChange(e, index, value) {
@@ -41,18 +54,35 @@ export default class DataGrid extends Component {
       ending = <span>Смены</span>;
     }
 
-    interactiveElement =
-      <div className={style.interactive_element}>
-        <DropDownMenu maxHeight={300} value={this.state.focusValue} onChange={this.handleChange}>
-          {this.state.menuItems}
-        </DropDownMenu>
-        {ending}
-      </div>
+    if (this.props.type === 'classes' || this.props.type === 'alarms') {
+      interactiveElement =
+        <div className={style.interactive_element}>
+          <DropDownMenu maxHeight={300} value={this.state.focusValue} onChange={this.handleChange}>
+            {this.state.menuItems}
+          </DropDownMenu>
+          {ending}
+        </div>
+    } else if (this.props.type === 'duties') {
+//       interactiveElement = <DateRangePicker
+//   startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+//   startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+//   endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+//   endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+//   onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+//   focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+//   onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+// />;
+      interactiveElement = <DatePicker className={style.datepicker} hintText="С 05.01 ПО 10.01"/>
+
+    }
+
 
     return <MuiThemeProvider>{interactiveElement}</MuiThemeProvider>
   }
 
   componentWillMount() {
+
+
     let items = [];
     let existingItems = [];
 
@@ -108,13 +138,14 @@ export default class DataGrid extends Component {
             <span>{this.props.title}</span> {this.interactiveElement()}
           </div>
 
-          <div className={style.grid_outer_container}>
+          <div
+            id='DATA' className={style.grid_outer_container}>
             <ReactDataSheet
               className={style.grid_inner_container}
               overflow='clip'
               data={this.state.data}
               valueRenderer={(cell) => cell.value}
-              onContextMenu={(e, cell, i, j) => cell.readOnly ? e.preventDefault() : null}
+              onContextMenu={(e, cell, i, j) => cell.readOnly ? ()=>{console.log('HELLO');e.preventDefault();} : null}
               onChange={(modifiedCell, rowI, colJ, value) =>
                 this.setState({
                   data: this.state.data.map((row) =>

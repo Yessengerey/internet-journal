@@ -42,9 +42,27 @@ export default class StudentsParents extends Component {
           {value: 7, readOnly: true},
           {value: 8, readOnly: true},
         ],
-        [{value: 'С 08:00'}, {value: 'С 08:50'}, {value: 'С 09:40'}, {value: 'С 10:35'}, {value: 'С 11:35'}, {value: 'С 12:25'}, {value: 'С 13:15'}, {value: 'С 14:05'}],
-        [{value: 'До 08:40'}, {value: 'До 09:35'}, {value: 'До 10:25'}, {value: 'До 11:20'}, {value: 'До 12:20'}, {value: 'До 13:10'}, {value: 'До 14:00'}, {value: 'До 14:50'}]
-      ]
+        [{readOnly: true, value: 'С 08:00'}, {readOnly: true, value: 'С 08:50'}, {readOnly: true, value: 'С 09:40'}, {readOnly: true, value: 'С 10:35'}, {readOnly: true, value: 'С 11:35'}, {readOnly: true, value: 'С 12:25'}, {readOnly: true, value: 'С 13:15'}, {readOnly: true, value: 'С 14:05'}],
+        [{readOnly: true, value: 'До 08:40'}, {readOnly: true, value: 'До 09:35'}, {readOnly: true, value: 'До 10:25'}, {readOnly: true, value: 'До 11:20'}, {readOnly: true, value: 'До 12:20'}, {readOnly: true, value: 'До 13:10'}, {readOnly: true, value: 'До 14:00'}, {readOnly: true, value: 'До 14:50'}]
+      ],
+      dutiesData: [
+        [
+          {value: 'Понедельник', readOnly: true},
+          {value: 'Вторник', readOnly: true},
+          {value: 'Среда', readOnly: true},
+          {value: 'Четверг', readOnly: true},
+          {value: 'Пятница', readOnly: true},
+          {value: 'Суббота', readOnly: true},
+        ],
+        [{value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}],
+        [{value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}],
+        [{value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}],
+        [{value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}],
+        [{value: ''}, {value: 'Физика'}, {value: ''}, {value: 'Физика'}, {value: ''}, {value: 'Физика'}],
+        [{value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}],
+        [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}]
+      ],
     }
   }
 
@@ -64,6 +82,11 @@ export default class StudentsParents extends Component {
           numberedRows={false}
           shifts={this.props.shifts}
           data={this.state.alarmsData}/>
+        <DataGrid
+          title={this.state.thirdTableTitle}
+          type={'duties'}
+          numberedRows={true}
+          data={this.state.dutiesData}/>
       </div>
     )
   }
