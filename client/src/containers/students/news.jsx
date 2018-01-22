@@ -7,10 +7,6 @@ export default class News extends Component {
     super(props);
   }
 
-  componentWillMount() {
-    console.log('NEWS', this.props.quarters);
-  }
-
   render() {
     return (
       <NewsFeed title={'Новости/Ивенты за'} quarters={this.props.quarters}/>
