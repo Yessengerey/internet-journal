@@ -31,6 +31,7 @@ export default class ControlPanel extends Component {
 
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.toggleActiveButton = this.toggleActiveButton.bind(this);
+    this.handleExit = this.handleExit.bind(this);
   }
 
   componentDidMount() {
@@ -58,6 +59,10 @@ export default class ControlPanel extends Component {
     })
 
     this.props.handleViewChange(e.target.id);
+  }
+
+  handleExit() {
+    this.props.handleStageChange('landing');
   }
 
   render() {
@@ -115,7 +120,8 @@ export default class ControlPanel extends Component {
             className={style.exit_button}
             hoveredStyle={{  boxShadow: '0 0 10px #c5c5c5'}}
             tooltip='Выйти'
-            tooltipPosition='bottom-right'>
+            tooltipPosition='bottom-right'
+            onClick={this.handleExit}>
             <ExitIcon/>
           </IconButton>
         </div>

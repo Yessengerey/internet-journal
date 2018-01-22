@@ -1,10 +1,13 @@
 .grid_outer_container {
   border-radius: 20px;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid_inner_container {
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .grid_inner_container td {

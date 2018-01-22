@@ -26,7 +26,7 @@ export default class DataGrid extends Component {
   componentWillMount() {
     if (this.props.numberedRows) {
       let newData = this.state.data;
-      newData[0].unshift({readOnly: true, value: '№'});
+      newData[0].unshift({readOnly: true, value: '№', width: 40});
 
       for (var i = 1; i < newData.length; i++) {
         newData[i].unshift({readOnly: true, value: i});
@@ -37,7 +37,7 @@ export default class DataGrid extends Component {
       })
     } else if (this.props.type === 'alarms') {
       let newData = this.state.data;
-      newData[0].unshift({readOnly: true, value: ''});
+      newData[0].unshift({readOnly: true, value: '', width: 40});
 
       newData[1].unshift({readOnly: true, value: 'С:'});
       newData[2].unshift({readOnly: true, value: 'ДО:'});
@@ -55,9 +55,11 @@ export default class DataGrid extends Component {
   }
 
   render() {
+    let titleElement = this.props.title ? <InteractiveTitle title={this.props.title} type={this.props.type} dropDownItems={this.props.dropDownItems}/> : <div></div>;
+
     return (
         <div className={style.table_container}>
-          <InteractiveTitle title={this.props.title} type={this.props.type} dropDownItems={this.props.dropDownItems}/>
+          {titleElement}
           <div
             id='DATA' className={style.grid_outer_container} style={{width: this.props.width}}>
             <ReactDataSheet

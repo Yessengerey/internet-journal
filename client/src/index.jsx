@@ -59,7 +59,7 @@ export default class App extends Component {
         mainElement = <div style={{margin: '50px', height: '90%'}}><Landing handleStageChange={this.handleStageChange}/></div>
         break;
       case 'students':
-        mainElement = <div style={{height: '100%'}}><StudentsParents grades={this.state.grades} shifts={this.state.shifts} quarters={this.state.quarters}/></div>
+        mainElement = <div style={{height: '100%'}}><StudentsParents handleStageChange={this.handleStageChange} grades={this.state.grades} shifts={this.state.shifts} quarters={this.state.quarters}/></div>
         break;
     }
     return (

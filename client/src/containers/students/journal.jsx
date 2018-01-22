@@ -8,18 +8,18 @@ export default class Journal extends Component {
     this.state = {
       data: [
         [
-          {value: 'Предмет', readOnly: true},
-          {value: 'Учитель/Кабинет', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true},
-          {value: '05.01', readOnly: true}
+          {value: 'Предмет', readOnly: true, width: 150},
+          {value: 'Учитель/Кабинет', readOnly: true, width: 180},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50},
+          {value: '05.01', readOnly: true, width: 50}
         ],
           [{value: 'Математика'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: '5'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
           [{value: 'Литература'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],

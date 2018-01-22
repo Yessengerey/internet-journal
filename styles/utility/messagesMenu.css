@@ -1,0 +1,28 @@
+.messages_menu_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.menu_item_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 5px 0 5px 0;
+  cursor: pointer;
+}
+
+.menu_item_title {
+  margin-right: 15px;
+}
+
+.menu_number {
+
+}
+
+.new_message_bold {
+  font-family: 'GothamProp Bold';
+}

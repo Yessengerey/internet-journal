@@ -8,9 +8,9 @@ export default class Homework extends Component {
     this.state = {
       data: [
         [
-          {value: 'Предмет', readOnly: true},
-          {value: 'Учитель', readOnly: true},
-          {value: 'План', readOnly: true}
+          {value: 'Предмет', readOnly: true, width: 150},
+          {value: 'Учитель', readOnly: true, width: 180},
+          {value: 'Задание', readOnly: true, width: 350}
         ],
           [{value: 'Математика'}, {value: ''}, {value: ''}],
           [{value: 'Литература'}, {value: ''}, {value: ''}],
