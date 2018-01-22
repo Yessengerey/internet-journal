@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import DataGrid from '../../components/utility/datagrid.jsx';
 
-import style from '../../../../styles/students/journal.css';
-
 export default class Journal extends Component {
   constructor(props) {
     super(props);
@@ -33,6 +31,8 @@ export default class Journal extends Component {
           [{value: 'Казахский'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
           [{value: 'Русский'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
           [{value: 'География'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+          [{value: 'Технологии'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+          [{value: 'Искусство'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
           [{value: 'История М.'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
           [{value: 'История К.'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: '5'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
           [{value: 'Литература К.'}, {value: ''}, {value: ''}, {value: ''}, {value: '4'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],

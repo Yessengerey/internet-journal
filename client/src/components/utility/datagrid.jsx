@@ -75,7 +75,8 @@ export default class DataGrid extends Component {
 //   onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
 // />;
       interactiveElement = <DatePicker className={style.datepicker} hintText="С 05.01 ПО 10.01"/>
-
+    } else if (this.props.type === 'homework') {
+      interactiveElement = <DatePicker className={style.datepicker} hintText="05.01"/>
     }
 
 
