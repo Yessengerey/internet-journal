@@ -33,7 +33,7 @@ export default class StudentsParents extends Component {
       schedule: <Schedule grades={this.props.grades} shifts={this.props.shifts}/>,
       journal: <Journal quarters={this.props.quarters}/>,
       homework: <Homework />,
-      syllabus: <Syllabus />,
+      syllabus: <Syllabus quarters={this.props.quarters}/>,
       news: <News />,
       messages: <Messages />
     }

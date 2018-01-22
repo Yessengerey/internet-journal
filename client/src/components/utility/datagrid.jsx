@@ -52,11 +52,11 @@ export default class DataGrid extends Component {
       ending = <span>Класса</span>;
     } else if (this.props.type === 'alarms') {
       ending = <span>Смены</span>;
-    } else if (this.props.type === 'marks') {
+    } else if (this.props.type === 'marks' || this.props.type === 'syllabus') {
       ending = <span>Четверть</span>
     }
 
-    if (this.props.type === 'classes' || this.props.type === 'alarms' || this.props.type === 'marks') {
+    if (this.props.type === 'classes' || this.props.type === 'alarms' || this.props.type === 'marks' || this.props.type === 'syllabus') {
       interactiveElement =
         <div className={style.interactive_element}>
           <DropDownMenu maxHeight={300} value={this.state.focusValue} onChange={this.handleChange}>
