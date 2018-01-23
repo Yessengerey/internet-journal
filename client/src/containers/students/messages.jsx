@@ -10,6 +10,7 @@ import IconButton from 'material-ui/IconButton';
 import CheckIcon from 'material-ui/svg-icons/navigation/check';
 import ArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
 import ArrowRight from 'material-ui/svg-icons/hardware/keyboard-arrow-right';
+import SearchIcon from 'material-ui/svg-icons/action/search';
 
 import style from '../../../../styles/utility/messages.css';
 
@@ -54,7 +55,20 @@ export default class Messages extends Component {
           <div className={style.message_inner_container}>
             <div className={style.messages_title_search_container}>
               <div className={style.messages_title_container}>Личные сообщения</div>
-              <div className={style.search}></div>
+              <div className={style.search_outer_container}>
+                <div className={style.search_inner_container}>
+                  <div className={style.search_icon}>
+                    <SearchIcon />
+                  </div>
+                  <input className={style.search_input}>
+
+                  </input>
+                  <div
+                    className={style.submit_button}>
+                    Поиск
+                  </div>
+                </div>
+              </div>
             </div>
             <div className={style.messages_body_container}>
               <MessagesMenu unread={1} important={2}/>

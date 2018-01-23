@@ -15,7 +15,7 @@
 }
 
 .messages_title_search_container {
-  height: 10%;
+  height: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +27,7 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .messages_body_container {
@@ -43,12 +44,14 @@
 }
 
 .header_container {
-  width: 79.7%;
+  width: 79.9%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 0.1px solid #dddddd;
+  border: 0.5px solid #dddddd;
   height: 40px;
+  border-bottom: none;
+  border-radius: 15px 15px 0 0;
 }
 
 .header {
@@ -89,6 +92,10 @@
   cursor: pointer;
 }
 
+.button:hover {
+  opacity: 0.5;
+}
+
 .inbox_pages {
   height: 100%;
   display: flex;
@@ -111,4 +118,66 @@
   height: 100% !important;
   width: 25px !important;
   border-radius: 50%;
+}
+
+.search_outer_container {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_inner_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search_icon {
+  background-color: white;
+  border-radius: 16px 0 0 16px;
+  border-right: none;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+  width: 40px;
+  /* text-align: center; */
+  display: flex;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_input {
+  line-height: 26px;
+  border: none;
+  background-color: white;
+  width: 300px;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  border-left: none;
+  border-right: none;
+}
+
+.search_input:focus {
+  outline: none;
+}
+
+.submit_button {
+  background-color: #66428f;
+  color: white;
+  line-height: 28px;
+  width: 70px;
+  text-align: center;
+  border-radius: 0 16px 16px 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  border: 1px solid #66428f;
+}
+
+.submit_button:hover {
+  opacity: 0.5;
 }

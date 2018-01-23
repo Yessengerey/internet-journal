@@ -16,7 +16,22 @@ export default class LandingPanel extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleStageChange(this.props.panelType);
+    if (this.props.panelType === 'students') {
+      if (document.getElementById('login').value === 'student' && document.getElementById('password').value === 'student') {
+        this.props.handleStageChange(this.props.panelType);
+      } else {
+        alert('Проверьте имя пользователя или пароль!');
+        document.getElementById('password').value = '';
+      }
+    } else if (this.props.panelType === 'teachers') {
+      if (document.getElementById('login').value === 'teacher' && document.getElementById('teacher').value === 'student') {
+        this.props.handleStageChange(this.props.panelType);
+      } else {
+        alert('Проверьте имя пользователя или пароль!');
+        document.getElementById('password').value = '';
+      }
+    }
+
   }
 
   render() {
@@ -35,12 +50,14 @@ export default class LandingPanel extends Component {
         <form className={style.form_container}
           onSubmit={this.handleSubmit}>
           <input
+            id='login'
             className={style.input_field}
             type='text'
             placeholder='логин'>
 
           </input>
           <input
+            id='password'
             className={style.input_field}
             type='password'
             placeholder='пароль'>
