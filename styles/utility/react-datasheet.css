@@ -34,8 +34,8 @@ table.data-grid td.cell.selected {
 }
 
 table.data-grid td.cell.read-only {
-  background: whitesmoke;
-  color: #999;
+  background: rgb(253, 253, 253);
+  /*color: #999;*/
   text-align: center;
 }
 
@@ -48,11 +48,13 @@ table.data-grid td.cell > div.text {
 
 table.data-grid td.cell > input {
   outline: none !important;
-  border: 2px solid rgb(33, 133, 208);
+  border: 1px solid rgb(33, 133, 208);
   text-align:right;
-  width: calc(100% - 6px);
+  /*width: calc(100% - 6px);*/
   height: 100%;
-  font-size: 1vw;
+  width: 100%;
+  /*font-size: 1vw;*/
+  font-size: 0.8vw;
   background: none !important;
 }
 

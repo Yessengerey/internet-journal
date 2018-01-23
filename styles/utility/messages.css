@@ -82,14 +82,33 @@
   border-radius: 15px;
   text-transform: uppercase;
   font-family: 'GothamPro Light';
-  font-size: 1.1vw;
+  font-size: 12px;
   display: flex;
   height: 15px;
   align-items: center;
+  cursor: pointer;
 }
 
 .inbox_pages {
   height: 100%;
   display: flex;
   align-items: center;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.inbox_navigation {
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arrow {
+  background-color: #66428f !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 25px !important;
+  border-radius: 50%;
 }

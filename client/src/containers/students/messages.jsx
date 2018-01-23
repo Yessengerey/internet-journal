@@ -6,6 +6,7 @@ import DataGrid from '../../components/utility/datagrid.jsx';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+import IconButton from 'material-ui/IconButton';
 import CheckIcon from 'material-ui/svg-icons/navigation/check';
 import ArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
 import ArrowRight from 'material-ui/svg-icons/hardware/keyboard-arrow-right';
@@ -64,7 +65,7 @@ export default class Messages extends Component {
                   </div>
                   <div className={style.side_buttons_container}>
                     <div className={style.inbox_pages}>1-25 из 123</div>
-                    <div className={style.inbox_navigation}><ArrowLeft/> <ArrowRight/></div>
+                    <div className={style.inbox_navigation}><IconButton className={style.arrow}><ArrowLeft color={'white'}/></IconButton> <IconButton className={style.arrow}><ArrowRight color={'white'}/></IconButton></div>
                   </div>
                 </div>
                 <DataGrid
