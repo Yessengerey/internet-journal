@@ -7,6 +7,22 @@ import DatePicker from 'material-ui/DatePicker';
 
 import style from '../../../../styles/utility/interactiveTitle.css';
 
+import areIntlLocalesSupported from 'intl-locales-supported';
+
+
+let DateTimeFormat;
+
+/**
+ * Use the native Intl.DateTimeFormat if available, or a polyfill if not.
+ */
+if (areIntlLocalesSupported(['ru'])) {
+  DateTimeFormat = global.Intl.DateTimeFormat;
+} else {
+  const IntlPolyfill = require('intl');
+  DateTimeFormat = IntlPolyfill.DateTimeFormat;
+  require('intl/locale-data/jsonp/ru');
+}
+
 export default class InteractiveTitle extends Component {
   constructor(props) {
     super(props);
@@ -39,9 +55,9 @@ export default class InteractiveTitle extends Component {
           {ending}
         </div>
     } else if (this.props.type === 'duties') {
-      interactiveElement = <DatePicker className={style.datepicker} hintText="С 05.01 ПО 10.01"/>
+      interactiveElement = <DatePicker DateTimeFormat={DateTimeFormat} locale="ru" className={style.datepicker} hintText="С 05.01 ПО 10.01" style={{backgroundColor: 'red !important'}} dialogContainerStyle={{backgroundColor: 'red !important', color: 'red'}}/>
     } else if (this.props.type === 'homework') {
-      interactiveElement = <DatePicker className={style.datepicker} hintText="05.01"/>
+      interactiveElement = <DatePicker DateTimeFormat={DateTimeFormat} locale="ru" className={style.datepicker} hintText="05.01"/>
     }
 
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import MessagesMenu from '../../components/utility/messagesMenu.jsx';
 
 import DataGrid from '../../components/utility/datagrid.jsx';
-
+import Dialog from 'material-ui/Dialog';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import IconButton from 'material-ui/IconButton';
@@ -44,9 +44,26 @@ export default class Messages extends Component {
           [{component: <div><MuiThemeProvider><CheckIcon/></MuiThemeProvider></div>, forceComponent: true}, {value: 'Французский 05/01/2018'}, {value: ''}],
           [{component: <div><MuiThemeProvider><CheckIcon/></MuiThemeProvider></div>, forceComponent: true}, {value: 'Проф 05/01/2018'}, {value: ''}],
           [{component: <div><MuiThemeProvider><CheckIcon/></MuiThemeProvider></div>, forceComponent: true}, {value: 'Проф 05/01/2018'}, {value: ''}]
-      ]
+      ],
+      open: false
     }
+
+    this.handleOpenDialog = this.handleOpenDialog.bind(this);
+    this.handleCloseDialog = this.handleCloseDialog.bind(this);
   }
+
+  handleOpenDialog() {
+    this.setState({
+      open: true
+    })
+  }
+
+  handleCloseDialog() {
+    this.setState({
+      open: false
+    })
+  }
+
 
   render() {
     return (
@@ -74,7 +91,7 @@ export default class Messages extends Component {
               <MessagesMenu unread={1} important={2}/>
               <div className={style.inbox}>
                 <div className={style.header_container}>
-                  <div className={style.button_container}>
+                  <div className={style.button_container} onClick={this.handleOpenDialog}>
                     <div className={style.button}>Написать</div>
                   </div>
                   <div className={style.side_buttons_container}>
@@ -90,6 +107,32 @@ export default class Messages extends Component {
               </div>
             </div>
           </div>
+          <Dialog
+            modal={false}
+            open={this.state.open}
+            onRequestClose={this.handleCloseDialog}
+          >
+            <div className={style.popup_container}>
+              <div className={style.to_title}>
+                Кому
+              </div>
+              <input className={style.to_input}>
+
+              </input>
+              <div className={style.text_title}>
+                Текст
+              </div>
+              <textarea
+                className={style.text_area}
+                maxLength={500}
+                rows={6}
+                cols={40}>
+              </textarea>
+              <div className={style.send_button}>
+                Отправить
+              </div>
+            </div>
+        </Dialog>
         </div>
       </MuiThemeProvider>
     )
