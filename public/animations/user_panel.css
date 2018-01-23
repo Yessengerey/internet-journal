@@ -1,18 +1,22 @@
 
 .panel-transition-enter {
   opacity: 0;
+  margin-bottom: 100px;
 }
 
 .panel-transition-enter.panel-transition-enter-active {
   opacity: 1;
-  transition: opacity 200ms ease-in;
+  margin-bottom: 0px;
+  transition: opacity 200ms ease-in, margin-bottom 400ms ease-in;
 }
 
 .panel-transition-leave {
   opacity: 1;
+  margin-bottom: 0px
 }
 
 .panel-transition-leave.panel-transition-leave-active {
   opacity: 0;
-  transition: opacity 200ms ease-in;
+  margin-bottom: 100px;
+  transition: opacity 200ms ease-in, margin-bottom 200ms ease-in;
 }
