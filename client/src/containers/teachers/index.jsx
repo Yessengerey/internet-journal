@@ -5,7 +5,7 @@ import Footer from '../../components/utility/footer.jsx'
 
 import SwipeableViews from 'react-swipeable-views';
 
-import style from '../../../../styles/students/students_index.css';
+import style from '../../../../styles/teachers/teachers_index.css';
 
 import Schedule from './schedule.jsx';
 import Homework from './homework.jsx';
@@ -33,9 +33,9 @@ export default class Teachers extends Component {
 
   render() {
     return (
-      <div className={style.students_main_container}>
+      <div className={style.teachers_main_container}>
         <ControlPanel handleViewChange={this.handleViewChange} handleStageChange={this.props.handleStageChange}/>
-        teachers
+        <div className={style.teacher_name_container}><span>Петрова Мария Ивановна</span></div>
         <div style={{width: '100%'}}>
           <SwipeableViews
             index={this.state.currentView}
