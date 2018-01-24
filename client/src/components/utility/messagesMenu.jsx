@@ -28,10 +28,10 @@ export default class MessagesMenu extends Component {
   render() {
     return (
       <div className={style.messages_menu_container}>
-        <div id='0' className={style.menu_item_container} style={{fontFamily: 'GothamPro Bold'}}>
+        <div id='0' className={style.menu_item_container} style={{fontFamily: 'GothamPro Medium'}}>
           <div className={style.menu_item_title}>Входящие</div> {this.newMessages(this.props.unread)}
         </div>
-        <div id='1' className={style.menu_item_container} style={{fontFamily: 'GothamPro Bold'}}>
+        <div id='1' className={style.menu_item_container} style={{fontFamily: 'GothamPro Medium'}}>
           <div className={style.menu_item_title}>Важные</div> {this.newMessages(this.props.important)}
         </div>
         <div id='2' className={style.menu_item_container}>

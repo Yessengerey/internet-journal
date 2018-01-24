@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  font-size: 1.3vw;
 }
 
 .menu_item_container {

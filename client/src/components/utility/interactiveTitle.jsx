@@ -12,16 +12,7 @@ import areIntlLocalesSupported from 'intl-locales-supported';
 
 let DateTimeFormat;
 
-/**
- * Use the native Intl.DateTimeFormat if available, or a polyfill if not.
- */
-if (areIntlLocalesSupported(['ru'])) {
-  DateTimeFormat = global.Intl.DateTimeFormat;
-} else {
-  const IntlPolyfill = require('intl');
-  DateTimeFormat = IntlPolyfill.DateTimeFormat;
-  require('intl/locale-data/jsonp/ru');
-}
+DateTimeFormat = global.Intl.DateTimeFormat;
 
 export default class InteractiveTitle extends Component {
   constructor(props) {
