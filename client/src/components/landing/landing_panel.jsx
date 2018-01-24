@@ -24,7 +24,8 @@ export default class LandingPanel extends Component {
         document.getElementById('password').value = '';
       }
     } else if (this.props.panelType === 'teachers') {
-      if (document.getElementById('login').value === 'teacher' && document.getElementById('teacher').value === 'student') {
+      console.log(document.getElementById('login'));
+      if (document.getElementById('login').value === 'teacher' && document.getElementById('password').value === 'teacher') {
         this.props.handleStageChange(this.props.panelType);
       } else {
         alert('Проверьте имя пользователя или пароль!');

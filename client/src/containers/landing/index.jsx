@@ -88,7 +88,7 @@ export default class Landing extends Component {
     if (this.state.panelIndex === 0 && this.state.transitionEnd) {
       panelElement = <StudentPanel key='studentpanel' panelType={'students'} handleTransitionEnd={this.handleTransitionEnd} handleStageChange={this.props.handleStageChange}/>
     } else if (this.state.panelIndex === 1 && this.state.transitionEnd) {
-      panelElement = <TeachersPanel key='teacherpanel' panelType={'teachers'} handleTransitionEnd={this.handleTransitionEnd}/>;
+      panelElement = <TeachersPanel key='teacherpanel' panelType={'teachers'} handleTransitionEnd={this.handleTransitionEnd} handleStageChange={this.props.handleStageChange}/>;
     } else if (this.state.panelIndex === 2 && this.state.transitionEnd) {
       panelElement = <ContactUsPanel key='contactpanel' panelType={'contactus'} handleTransitionEnd={this.handleTransitionEnd}/>;
     }

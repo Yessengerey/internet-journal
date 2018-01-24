@@ -9,6 +9,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import Landing from './containers/landing/index.jsx';
 
 import StudentsParents from './containers/students/index.jsx';
+import Teachers from './containers/teachers/index.jsx';
 
 export default class App extends Component {
   constructor(props) {
@@ -60,6 +61,9 @@ export default class App extends Component {
         break;
       case 'students':
         mainElement = <div style={{height: '100%'}}><StudentsParents handleStageChange={this.handleStageChange} grades={this.state.grades} shifts={this.state.shifts} quarters={this.state.quarters}/></div>
+        break;
+      case 'teachers':
+        mainElement = <div style={{height: '100%'}}><Teachers handleStageChange={this.handleStageChange} grades={this.state.grades} shifts={this.state.shifts} quarters={this.state.quarters}/></div>
         break;
     }
     return (
