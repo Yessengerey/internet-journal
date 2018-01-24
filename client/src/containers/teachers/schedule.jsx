@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import DataGrid from '../../components/utility/datagrid.jsx';
 
+import Switch from '../../components/utility/switch.jsx';
 export default class Schedule extends Component {
   constructor(props) {
     super(props);
@@ -50,28 +51,52 @@ export default class Schedule extends Component {
           {value: 'Пятница', readOnly: true, width: 150},
           {value: 'Суббота', readOnly: true, width: 150},
         ],
-        [{value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}],
-        [{value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}],
-        [{value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}],
-        [{value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}],
-        [{value: ''}, {value: 'Физика'}, {value: ''}, {value: 'Физика'}, {value: ''}, {value: 'Физика'}],
-        [{value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}],
+        [{value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}],
+        [{value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}],
+        [{value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}],
+        [{value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}],
+        [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+        [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+        [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
         [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}]
       ],
+      switchView: 'Курирование 5А'
     }
+
+    this.switchView = this.switchView.bind(this);
+  }
+
+  switchView(nextView) {
+    this.setState({
+      switchView: nextView
+    })
   }
 
   render() {
+    let leftSwitchView = <DataGrid
+      title={this.state.firstTableTitle}
+      type={'classes'}
+      numberedRows={true}
+      width={'70%'}
+      dropDownItems={this.props.grades}
+      data={this.state.classesData}/>;
+
+    let rightSwitchView = <DataGrid
+      title={'Расписание уроков'}
+      type={'duties'}
+      numberedRows={true}
+      width={'70%'}
+      data={this.state.dutiesData}/>;
+
+    let switchEl = this.state.switchView === 'Курирование 5А' ? leftSwitchView : rightSwitchView;
+
     return (
       <div>
-        <DataGrid
-          title={this.state.firstTableTitle}
-          type={'classes'}
-          numberedRows={true}
-          width={'70%'}
-          dropDownItems={this.props.grades}
-          data={this.state.classesData}/>
+        <Switch
+          leftTitle={'Курирование 5А'}
+          rightTitle={'Проф. Предмет'}
+          switchView={this.switchView}/>
+        {switchEl}
         <DataGrid
           title={this.state.secondTableTitle}
           type={'alarms'}

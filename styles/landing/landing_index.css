@@ -70,6 +70,10 @@
   opacity: 0.5;
 }
 
+.panel_view_buttons:hover, .panel_view_buttons div:hover, .panel_view_buttons div span:hover {
+  cursor: pointer;
+}
+
 .active_button {
   opacity: 1 !important;
 }
