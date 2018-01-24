@@ -18,39 +18,47 @@ export default class DataGrid extends Component {
     // data is for datagrid content
     this.state = {
       data: this.props.data,
-      grades: undefined,
-      shifts: undefined,
+      dataIsFixed: false
     }
+
+    // this.makeNumberedGrid = this.makeNumberedGrid.bind(this);
   }
 
-  componentWillMount() {
-    if (this.props.numberedRows) {
-      let newData = this.state.data;
-      newData[0].unshift({readOnly: true, value: '№', width: 40});
-
-      for (var i = 1; i < newData.length; i++) {
-        newData[i].unshift({readOnly: true, value: i});
-      }
-
-      this.setState({
-        data: newData
-      })
-    } else if (this.props.type === 'alarms') {
-      let newData = this.state.data;
-      newData[0].unshift({readOnly: true, value: '', width: 40});
-
-      newData[1].unshift({readOnly: true, value: 'С:'});
-      newData[2].unshift({readOnly: true, value: 'ДО:'});
-
-      this.setState({
-        data: newData
-      })
-    }
-  }
+  // makeNumberedGrid(nextProps) {
+  //   if (nextProps.numberedRows) {
+  //     let newData = this.props.data;
+  //     newData[0].unshift({readOnly: true, value: '№', width: 40});
+  //
+  //     for (var i = 1; i < newData.length; i++) {
+  //       newData[i].unshift({readOnly: true, value: i});
+  //     }
+  //     this.props.data = newData;
+  //     // this.setState({
+  //     //   data: newData,
+  //     //   alreadyNumbered: true
+  //     // })
+  //   } else if (nextProps.type === 'alarms') {
+  //     let newData = this.props.data;
+  //     newData[0].unshift({readOnly: true, value: '', width: 40});
+  //
+  //     newData[1].unshift({readOnly: true, value: 'С:'});
+  //     newData[2].unshift({readOnly: true, value: 'ДО:'});
+  //
+  //     // this.setState({
+  //     //   data: newData
+  //     // })
+  //   }
+  // }
+  //
+  // componentWillMount() {
+  //   this.makeNumberedGrid(this.props);
+  // }
 
   componentWillReceiveProps(nextProps) {
     if (JSON.stringify(nextProps) !== JSON.stringify(this.props)) {
-      this.setState(nextProps)
+      this.setState({
+        data: nextProps.data
+      });
     }
   }
 

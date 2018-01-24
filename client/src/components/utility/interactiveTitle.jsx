@@ -37,7 +37,7 @@ export default class InteractiveTitle extends Component {
       ending = <span>Четверть</span>
     }
 
-    if (this.props.type === 'classes' || this.props.type === 'alarms' || this.props.type === 'marks' || this.props.type === 'syllabus' || this.props.type === 'news') {
+    if ((this.props.type === 'classes' || this.props.type === 'alarms' || this.props.type === 'marks' || this.props.type === 'syllabus' || this.props.type === 'news') && this.props.dropDownItems) {
       interactiveElement =
         <div className={style.interactive_element}>
           <DropDownMenu maxHeight={300} value={this.state.focusValue} onChange={this.handleChange}>

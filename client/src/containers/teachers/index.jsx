@@ -42,7 +42,7 @@ export default class Teachers extends Component {
             onChangeIndex={this.handleViewChange}
             >
               <Schedule grades={this.props.grades} shifts={this.props.shifts}/>
-              <Journal quarters={this.props.quarters}/>
+              <Journal grades={this.props.grades} quarters={this.props.quarters}/>
               <Homework quarters={this.props.quarters} />
               <Syllabus quarters={this.props.quarters}/>
               <News quarters={this.props.quarters} />
