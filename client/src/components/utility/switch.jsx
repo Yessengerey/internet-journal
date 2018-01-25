@@ -27,7 +27,7 @@ export default class Switch extends Component {
   render() {
     return (
       <div className={style.switch_outer_container}>
-        <div className={style.switch_inner_container}>
+        <div className={style.switch_inner_container} style={{width: this.props.width ? this.props.width : '33%'}}>
           <div id={this.props.leftTitle} className={style.left_button} onClick={this.handleSwitch}>
             {this.props.leftTitle}
           </div>

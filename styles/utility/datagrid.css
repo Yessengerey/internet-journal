@@ -7,7 +7,10 @@
 }
 
 .grid_inner_container {
-  /*width: 100%;*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid_inner_container td {
@@ -25,4 +28,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }

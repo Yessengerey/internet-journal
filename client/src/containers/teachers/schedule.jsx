@@ -68,6 +68,7 @@ export default class Schedule extends Component {
       ],
       dutiesData: [
         [
+          {readOnly: true, value: '№', width: 40},
           {value: 'Понедельник', readOnly: true, width: 150},
           {value: 'Вторник', readOnly: true, width: 150},
           {value: 'Среда', readOnly: true, width: 150},
@@ -75,14 +76,14 @@ export default class Schedule extends Component {
           {value: 'Пятница', readOnly: true, width: 150},
           {value: 'Суббота', readOnly: true, width: 150},
         ],
-        [{value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}],
-        [{value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}],
-        [{value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}],
-        [{value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}],
-        [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
-        [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
-        [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
-        [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}]
+        [{value: '1'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}],
+        [{value: '2'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}],
+        [{value: '3'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}],
+        [{value: '4'}, {value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}],
+        [{value: '5'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+        [{value: '6'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+        [{value: '7'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+        [{value: '8'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}]
       ],
       switchView: 'Курирование 5А'
     }
