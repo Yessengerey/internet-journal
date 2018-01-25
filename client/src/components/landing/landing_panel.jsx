@@ -83,6 +83,7 @@ export default class LandingPanel extends Component {
 
           </input>
           <textarea
+            className={style.panel_text_area}
             placeholder='Ваш текст..'
             maxLength={500}
             rows={6}
