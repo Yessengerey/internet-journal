@@ -52,6 +52,7 @@ export default class Messages extends Component {
 
     this.handleOpenDialog = this.handleOpenDialog.bind(this);
     this.handleCloseDialog = this.handleCloseDialog.bind(this);
+    this.addMailboxHeader = this.addMailboxHeader.bind(this);
   }
 
   handleOpenDialog() {
@@ -64,6 +65,30 @@ export default class Messages extends Component {
     this.setState({
       open: false
     })
+  }
+
+  addMailboxHeader(headerElement) {
+    let updatedData = this.state.data.slice(0);
+    updatedData.unshift([{disableEvents: true, component: headerElement, forceComponent: true, colSpan: 3}]);
+
+    this.setState({
+      data: updatedData
+    })
+  }
+
+  componentWillMount() {
+    let mailboxHeaderElement =
+      <div className={style.header_container}>
+        <div className={style.button_container} onClick={this.handleOpenDialog}>
+          <div className={style.button}>Написать</div>
+        </div>
+        <div className={style.side_buttons_container}>
+          <div className={style.inbox_pages}>1-25 из 123</div>
+          <div className={style.inbox_navigation}><IconButton className={style.arrow}><ArrowLeft color={'white'}/></IconButton> <IconButton className={style.arrow}><ArrowRight color={'white'}/></IconButton></div>
+        </div>
+      </div>;
+
+      this.addMailboxHeader(mailboxHeaderElement);
   }
 
 
@@ -92,15 +117,6 @@ export default class Messages extends Component {
             <div className={style.messages_body_container}>
               <MessagesMenu unread={1} important={2}/>
               <div className={style.inbox}>
-                <div className={style.header_container}>
-                  <div className={style.button_container} onClick={this.handleOpenDialog}>
-                    <div className={style.button}>Написать</div>
-                  </div>
-                  <div className={style.side_buttons_container}>
-                    <div className={style.inbox_pages}>1-25 из 123</div>
-                    <div className={style.inbox_navigation}><IconButton className={style.arrow}><ArrowLeft color={'white'}/></IconButton> <IconButton className={style.arrow}><ArrowRight color={'white'}/></IconButton></div>
-                  </div>
-                </div>
                 <DataGrid
                   title={this.state.gridTitle}
                   numberedRows={false}
