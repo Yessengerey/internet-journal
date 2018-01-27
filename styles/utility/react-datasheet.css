@@ -1,7 +1,9 @@
 
 table.data-grid {
   table-layout: fixed;
-  border-collapse: collapse;
+  /*border-collapse: collapse;*/
+  border-spacing: 0;
+  border-radius: 15px;
 
 }
 
@@ -60,6 +62,21 @@ table.data-grid td.cell > input {
   background: none !important;
 }
 
+table.data-grid tr:last-child td:first-child {
+    border-bottom-left-radius: 11px;
+}
+
+table.data-grid tr:last-child td:last-child {
+    border-bottom-right-radius: 11px;
+}
+
+table.data-grid tr:first-child td:first-child {
+    border-top-left-radius: 11px;
+}
+
+table.data-grid tr:first-child td:last-child {
+    border-top-right-radius: 11px;
+}
 
 table.data-grid td.cell {
   vertical-align: bottom;

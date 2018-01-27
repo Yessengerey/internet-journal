@@ -98,6 +98,33 @@ export default class Messages extends Component {
       this.changeMailView = this.changeMailView.bind(this);
       this.switchView = this.switchView.bind(this);
       this.handleDropDown = this.handleDropDown.bind(this);
+      this.addMailboxHeader = this.addMailboxHeader.bind(this);
+    }
+
+    addMailboxHeader(headerElement) {
+      let updatedData = this.state.data.slice(0);
+      updatedData.unshift([{disableEvents: true, component: headerElement, forceComponent: true, colSpan: 3}]);
+
+      this.setState({
+        data: updatedData
+      })
+    }
+
+    componentWillMount() {
+      let mailboxHeaderElement =
+        <div className={style.header_container}>
+          <div className={style.button_container} onClick={this.handleOpenDialog}>
+            <div className={style.button}>Написать</div>
+          </div>
+          <div className={style.side_buttons_container}>
+            <div className={style.inbox_pages}>1-25 из 123</div>
+            <div className={style.inbox_navigation}><IconButton className={style.arrow}><ArrowLeft color={'white'}/></IconButton> <IconButton className={style.arrow}><ArrowRight color={'white'}/></IconButton></div>
+          </div>
+        </div>;
+
+        this.addMailboxHeader(mailboxHeaderElement);
+
+
     }
 
     handleDropDown(e, index, value) {
@@ -177,15 +204,6 @@ export default class Messages extends Component {
 
       if (this.state.currentMailView === '0') {
         mailView =  <div className={style.inbox}>
-          <div className={style.header_container}>
-            <div className={style.button_container} onClick={this.handleOpenDialog}>
-              <div className={style.button}>Написать</div>
-            </div>
-            <div className={style.side_buttons_container}>
-              <div className={style.inbox_pages}>1-25 из 123</div>
-              <div className={style.inbox_navigation}><IconButton className={style.arrow}><ArrowLeft color={'white'}/></IconButton> <IconButton className={style.arrow}><ArrowRight color={'white'}/></IconButton></div>
-            </div>
-          </div>
           <DataGrid
             title={this.state.gridTitle}
             numberedRows={false}
@@ -193,7 +211,7 @@ export default class Messages extends Component {
             data={this.state.data}/>
           </div>;
         } else if (this.state.currentMailView === '5') {
-          mailView =  <div style={{width: '80%'}}>
+          mailView =  <div style={{width: '80%', display: 'flex', justifyContent: 'center'}}>
             <div className={style.classes_table_outer_container}>
               <Switch
                 leftTitle={'По классам'}

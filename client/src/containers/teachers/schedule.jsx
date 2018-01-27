@@ -16,21 +16,21 @@ export default class Schedule extends Component {
       specData: [
         [
           {readOnly: true, value: '№', width: 40},
-          {value: 'Понедельник', readOnly: true, width: 150},
-          {value: 'Вторник', readOnly: true, width: 150},
-          {value: 'Среда', readOnly: true, width: 150},
-          {value: 'Четверг', readOnly: true, width: 150},
-          {value: 'Пятница', readOnly: true, width: 150},
-          {value: 'Суббота', readOnly: true, width: 150},
+          {readOnly: true, value: 'Понедельник', readOnly: true, width: 150},
+          {readOnly: true, value: 'Вторник', readOnly: true, width: 150},
+          {readOnly: true, value: 'Среда', readOnly: true, width: 150},
+          {readOnly: true, value: 'Четверг', readOnly: true, width: 150},
+          {readOnly: true, value: 'Пятница', readOnly: true, width: 150},
+          {readOnly: true, value: 'Суббота', readOnly: true, width: 150},
         ],
-        [{value: '1'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: '2'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: '3'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: '4'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: '5'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: '6'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: '7'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: '8'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}]
+        [{value: '1', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: '2', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: '3', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: '4', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: '5', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: '6', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: '7', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: '8', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}]
       ],
       classesData: [
         [
@@ -42,14 +42,14 @@ export default class Schedule extends Component {
           {value: 'Пятница', readOnly: true, width: 150},
           {value: 'Суббота', readOnly: true, width: 150},
         ],
-        [{value: '1'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
-        [{value: '2'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}],
-        [{value: '3'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}],
-        [{value: '4'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}],
-        [{value: '5'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}],
-        [{value: '6'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}],
-        [{value: '7'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}],
-        [{value: '8'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}]
+        [{value: '1', readOnly: true, }, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}, {value: 'Математика'}],
+        [{value: '2', readOnly: true, }, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}, {value: 'Литература'}],
+        [{value: '3', readOnly: true, }, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}, {value: 'Биология'}],
+        [{value: '4', readOnly: true, }, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}, {value: 'Черчение'}],
+        [{value: '5', readOnly: true, }, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}, {value: 'Английский'}],
+        [{value: '6', readOnly: true, }, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}, {value: 'Физика'}],
+        [{value: '7', readOnly: true, }, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}],
+        [{value: '8', readOnly: true, }, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}, {value: 'Физкультура'}]
       ],
       alarmsData: [
         [
@@ -69,21 +69,21 @@ export default class Schedule extends Component {
       dutiesData: [
         [
           {readOnly: true, value: '№', width: 40},
-          {value: 'Понедельник', readOnly: true, width: 150},
-          {value: 'Вторник', readOnly: true, width: 150},
-          {value: 'Среда', readOnly: true, width: 150},
-          {value: 'Четверг', readOnly: true, width: 150},
-          {value: 'Пятница', readOnly: true, width: 150},
-          {value: 'Суббота', readOnly: true, width: 150},
+          {readOnly: true, value: 'Понедельник', readOnly: true, width: 150},
+          {readOnly: true, value: 'Вторник', readOnly: true, width: 150},
+          {readOnly: true, value: 'Среда', readOnly: true, width: 150},
+          {readOnly: true, value: 'Четверг', readOnly: true, width: 150},
+          {readOnly: true, value: 'Пятница', readOnly: true, width: 150},
+          {readOnly: true, value: 'Суббота', readOnly: true, width: 150},
         ],
-        [{value: '1'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}],
-        [{value: '2'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}],
-        [{value: '3'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}],
-        [{value: '4'}, {value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}],
-        [{value: '5'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
-        [{value: '6'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
-        [{value: '7'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
-        [{value: '8'}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}]
+        [{value: '1', readOnly: true, }, {value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}, {value: 'Денис 7В'}, {value: 'Алия 6А'}],
+        [{value: '2', readOnly: true, }, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}, {value: 'Андрей 3А'}, {value: 'Максим 3Б'}],
+        [{value: '3', readOnly: true, }, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}, {value: 'Алтынай 11А'}, {value: 'Адиль 10Б'}],
+        [{value: '4', readOnly: true, }, {value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}, {value: ''}, {value: 'Малика 2Г'}],
+        [{value: '5', readOnly: true, }, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+        [{value: '6', readOnly: true, }, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+        [{value: '7', readOnly: true, }, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}],
+        [{value: '8', readOnly: true, }, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}]
       ],
       switchView: 'Курирование 5А'
     }

@@ -61,10 +61,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 0.5px solid #dddddd;
+  /* border: 0.5px solid #dddddd; */
   height: 40px;
-  border-bottom: none;
-  border-radius: 15px 15px 0 0;
+  /* border-bottom: none; */
+  /* border-radius: 15px 15px 0 0; */
 }
 
 .header {
@@ -246,7 +246,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 70%;
   border: 1px solid lightgrey;
   padding: 20px 30px 10px 30px;
   border-radius: 15px;
@@ -276,7 +276,7 @@
 .left_title {
   padding: 15px 0px 15px 0px;
   text-transform: uppercase;
-  font-size: 1.2vw;
+  font-size: 0.9vw;
 }
 
 .left_grid {
@@ -292,7 +292,7 @@
 .right_title {
   padding: 15px 0px 15px 0px;
   text-transform: uppercase;
-  font-size: 1.2vw;
+  font-size: 0.9vw;
 }
 
 .homework_text_area {
@@ -317,7 +317,7 @@
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
-  font-size: 1vw;
+  font-size: 0.9vw;
 }
 
 .button_send {
