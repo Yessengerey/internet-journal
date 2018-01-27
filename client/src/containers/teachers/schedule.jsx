@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
-import DataGrid1 from '../../components/utility/datagrid.jsx';
-import DataGrid2 from '../../components/utility/datagrid.jsx';
-import DataGrid3 from '../../components/utility/datagrid.jsx';
-import DataGrid4 from '../../components/utility/datagrid.jsx';
+import DataGrid from '../../components/utility/datagrid.jsx';
 
 import Switch from '../../components/utility/switch.jsx';
 export default class Schedule extends Component {
@@ -98,7 +95,7 @@ export default class Schedule extends Component {
   }
 
   render() {
-    let leftSwitchView = <DataGrid1
+    let leftSwitchView = <DataGrid
       title={this.state.firstTableTitle}
       type={'classes'}
       numberedRows={true}
@@ -106,7 +103,7 @@ export default class Schedule extends Component {
       dropDownItems={this.props.grades}
       data={this.state.classesData}/>;
 
-    let rightSwitchView = <DataGrid2
+    let rightSwitchView = <DataGrid
       title={'Расписание'}
       type={'classes'}
       numberedRows={true}
@@ -122,14 +119,14 @@ export default class Schedule extends Component {
           rightTitle={'Проф. Предмет'}
           switchView={this.switchView}/>
         {switchEl}
-        <DataGrid3
+        <DataGrid
           title={this.state.secondTableTitle}
           type={'alarms'}
           numberedRows={false}
           width={'70%'}
           dropDownItems={this.props.shifts}
           data={this.state.alarmsData}/>
-        <DataGrid4
+        <DataGrid
           title={this.state.thirdTableTitle}
           type={'duties'}
           numberedRows={true}
