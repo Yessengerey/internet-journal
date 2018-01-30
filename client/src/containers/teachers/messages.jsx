@@ -1,26 +1,32 @@
+// React
 import React, { Component } from 'react';
 
+// Custom Components
 import MessagesMenu from '../../components/utility/messagesMenu.jsx';
 import ClassesGrid from '../../components/teachers/classesGrid.jsx';
 import StudentsGrid from '../../components/teachers/studentsGrid.jsx';
-import Checkbox from 'material-ui/Checkbox';
-
 import DataGrid from '../../components/utility/datagrid.jsx';
-import Dialog from 'material-ui/Dialog';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Switch from '../../components/utility/switch.jsx';
+
+// Material UI Components
+import Checkbox from 'material-ui/Checkbox';
+import Dialog from 'material-ui/Dialog';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
+// Material UI Icons
 import IconButton from 'material-ui/IconButton';
 import CheckIcon from 'material-ui/svg-icons/navigation/check';
 import ArrowLeft from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
 import ArrowRight from 'material-ui/svg-icons/hardware/keyboard-arrow-right';
 import SearchIcon from 'material-ui/svg-icons/action/search';
+import DownloadIcon from 'material-ui/svg-icons/file/file-download';
 
+// Style
 import style from '../../../../styles/utility/messages.css';
 
-const iconEl = <div><MuiThemeProvider><CheckIcon style={{height: '17px', width: 'auto'}}/></MuiThemeProvider></div>;
+const iconEl = <div><CheckIcon style={{height: '17px', width: 'auto'}}/></div>;
+const downloadFilesElement = <div></div>
 
 export default class Messages extends Component {
   constructor(props) {
@@ -261,7 +267,6 @@ export default class Messages extends Component {
             }
 
             return (
-              <MuiThemeProvider>
                 <div className={style.messages_main_container}>
 
                   <div className={style.message_inner_container}>
@@ -330,7 +335,6 @@ export default class Messages extends Component {
                     </Dialog>
 
                   </div>
-                </MuiThemeProvider>
               )
             }
           }

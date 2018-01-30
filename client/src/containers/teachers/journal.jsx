@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import DataGrid from '../../components/utility/datagrid.jsx';
 
 import Switch from '../../components/utility/switch.jsx';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import style from '../../../../styles/teachers/journal.css';
 
 import DropDownMenu from 'material-ui/DropDownMenu';
@@ -161,7 +160,6 @@ export default class Journal extends Component {
     let switchEl = this.state.currentSwitchView === 'КУрирование 5А' ? leftSwitchView : rightSwitchView;
 
     return (
-      <MuiThemeProvider>
       <div>
         <Switch
           leftTitle={'КУрирование 5А'}
@@ -170,7 +168,6 @@ export default class Journal extends Component {
         {dropDownEl}
         {switchEl}
       </div>
-    </MuiThemeProvider>
     )
   }
 }

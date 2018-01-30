@@ -67,7 +67,9 @@ export default class App extends Component {
         break;
     }
     return (
-      mainElement
+      <MuiThemeProvider>
+        {mainElement}
+      </MuiThemeProvider>
     )
   }
 }

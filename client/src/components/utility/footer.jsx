@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 
 // Material UI Components
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // styles
 import style from '../../../../styles/utility/footer.css';

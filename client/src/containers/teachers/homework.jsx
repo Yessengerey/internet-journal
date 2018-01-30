@@ -141,7 +141,6 @@ export default class Homework extends Component {
 
 
     return (
-      <MuiThemeProvider>
         <div>
           <Switch
             leftTitle={'КУРирование 5А'}
@@ -149,7 +148,6 @@ export default class Homework extends Component {
             switchView={this.switchView}/>
           {viewEl}
         </div>
-      </MuiThemeProvider>
     )
   }
 }

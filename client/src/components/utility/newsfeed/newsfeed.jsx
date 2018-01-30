@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import InteractiveTitle from '../interactiveTitle.jsx';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import IconButton from 'material-ui/IconButton';
 import InfoIcon from 'material-ui/svg-icons/action/info';
 import style from '../../../../../styles/utility/newsfeed.css';
@@ -48,7 +47,6 @@ export default class NewsFeed extends Component {
       <div className={style.newsfeed_main_container}>
         <InteractiveTitle title={this.props.title} type={'news'} dropDownItems={this.props.quarters}/>
         <div className={style.feed_container}>
-          <MuiThemeProvider>
             <GridList
               cellHeight={350}
               padding={50}
@@ -62,7 +60,6 @@ export default class NewsFeed extends Component {
                 </GridTile>
               ))}
             </GridList>
-          </MuiThemeProvider>
         </div>
       </div>
     )

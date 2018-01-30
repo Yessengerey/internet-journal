@@ -4,7 +4,6 @@ import MessagesMenu from '../../components/utility/messagesMenu.jsx';
 
 import DataGrid from '../../components/utility/datagrid.jsx';
 import Dialog from 'material-ui/Dialog';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import IconButton from 'material-ui/IconButton';
 import CheckIcon from 'material-ui/svg-icons/navigation/check';
@@ -14,7 +13,7 @@ import SearchIcon from 'material-ui/svg-icons/action/search';
 
 import style from '../../../../styles/utility/messages.css';
 
-const iconEl = <div><MuiThemeProvider><CheckIcon style={{height: '17px', width: 'auto'}}/></MuiThemeProvider></div>;
+const iconEl = <div><CheckIcon style={{height: '17px', width: 'auto'}}/></div>;
 
 export default class Messages extends Component {
   constructor(props) {
@@ -94,7 +93,6 @@ export default class Messages extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
         <div className={style.messages_main_container}>
           <div className={style.message_inner_container}>
             <div className={style.messages_title_search_container}>
@@ -152,7 +150,6 @@ export default class Messages extends Component {
             </div>
         </Dialog>
         </div>
-      </MuiThemeProvider>
     )
   }
 }

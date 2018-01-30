@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import DatePicker from 'material-ui/DatePicker';
 
 import style from '../../../../styles/utility/interactiveTitle.css';
@@ -52,7 +51,7 @@ export default class InteractiveTitle extends Component {
     }
 
 
-    return <MuiThemeProvider>{interactiveElement}</MuiThemeProvider>
+    return interactiveElement
   }
 
   handleChange(e, index, value) {

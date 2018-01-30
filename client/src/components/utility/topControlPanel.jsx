@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 
 // Material UI Components
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import IconButton from 'material-ui/IconButton';
 
 // Icons
@@ -67,7 +66,6 @@ export default class ControlPanel extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
         <div className={style.panel_main_container}>
           <div className={style.logo_container}>
             <img src='public/images/logo.png'/>
@@ -125,7 +123,6 @@ export default class ControlPanel extends Component {
             <ExitIcon/>
           </IconButton>
         </div>
-      </MuiThemeProvider>
     )
   }
 }

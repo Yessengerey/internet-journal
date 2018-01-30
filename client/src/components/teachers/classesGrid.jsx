@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Checkbox from 'material-ui/Checkbox';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
@@ -32,7 +31,7 @@ export default class ClassesGrid extends Component {
 
     for (var i = 0; i < this.state.classes.length; i+=3) {
       var classItem =
-        <MuiThemeProvider key={i}><div className={style.class_table_row}>
+        <div key={i}><div className={style.class_table_row}>
           <Checkbox
             style={{width: '33.33%'}}
             label={this.state.classes[i]}
@@ -57,7 +56,7 @@ export default class ClassesGrid extends Component {
             iconStyle={{fill: '#67428F'}}
             labelStyle={{fontSize: '1.1vw'}}
           />
-        </div></MuiThemeProvider>;
+        </div></div>;
 
       classesToRender.push(classItem);
     }
