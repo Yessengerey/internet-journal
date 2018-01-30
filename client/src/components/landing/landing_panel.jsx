@@ -55,33 +55,34 @@ export default class LandingPanel extends Component {
             className={style.input_field}
             type='text'
             placeholder='логин'>
-
           </input>
+
           <input
             id='password'
             className={style.input_field}
             type='password'
             placeholder='пароль'>
-
           </input>
+
           <input
             className={style.submit_button}
             type='submit'
             value='войти'>
-
           </input>
+          
         </form>
 
       </div>
     } else if (this.props.panelType === 'contactus') {
       panelElement = <div id={style.panel_outer_container}>
         <form className={style.form_container}>
+
           <input
             className={style.input_field}
             type='text'
             placeholder='Тема письма'>
-
           </input>
+
           <textarea
             className={style.panel_text_area}
             placeholder='Ваш текст..'
@@ -89,12 +90,13 @@ export default class LandingPanel extends Component {
             rows={6}
             cols={40}>
           </textarea>
+
           <input
             className={style.submit_button}
             type='submit'
             value='Отправить'>
-
           </input>
+
         </form>
 
       </div>
