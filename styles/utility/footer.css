@@ -20,7 +20,7 @@
 .panel_buttons span {
   font-size: 0.8vw;
   height: 25px;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
