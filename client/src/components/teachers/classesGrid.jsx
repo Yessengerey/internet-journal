@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 
 import Checkbox from 'material-ui/Checkbox';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import CheckBoxIcon from 'material-ui/svg-icons/toggle/check-box';
 import CheckBoxOutlineIcon from 'material-ui/svg-icons/toggle/check-box-outline-blank';
-
-import Visibility from 'material-ui/svg-icons/action/visibility';
-import {red500, yellow500, blue500} from 'material-ui/styles/colors';
-
 
 import style from '../../../../styles/teachers/classesGrid.css';
 
@@ -20,10 +15,10 @@ export default class ClassesGrid extends Component {
     }
 
     this.renderClasses = this.renderClasses.bind(this);
-    this.handleRadio = this.handleRadio.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
   }
 
-  handleRadio(e) {
+  handleSelection(e) {
   }
 
   renderClasses() {
@@ -36,7 +31,7 @@ export default class ClassesGrid extends Component {
             style={{width: '33.33%'}}
             label={this.state.classes[i]}
             value={this.state.classes[i]}
-            onCheck={this.handleRadio}
+            onCheck={this.handleSelection}
             iconStyle={{fill: '#67428F'}}
             labelStyle={{fontSize: '1.1vw'}}
           />
@@ -44,7 +39,7 @@ export default class ClassesGrid extends Component {
             style={{width: '33.33%'}}
             label={this.state.classes[i+1]}
             value={this.state.classes[i+1]}
-            onCheck={this.handleRadio}
+            onCheck={this.handleSelection}
             iconStyle={{fill: '#67428F'}}
             labelStyle={{fontSize: '1.1vw'}}
           />
@@ -52,7 +47,7 @@ export default class ClassesGrid extends Component {
             style={{width: '33.33%'}}
             label={this.state.classes[i+2]}
             value={this.state.classes[i+2]}
-            onCheck={this.handleRadio}
+            onCheck={this.handleSelection}
             iconStyle={{fill: '#67428F'}}
             labelStyle={{fontSize: '1.1vw'}}
           />
