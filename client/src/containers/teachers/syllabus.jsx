@@ -21,7 +21,7 @@ export default class Syllabus extends Component {
           {readOnly: true, value: '№', width: 40},
           {value: 'Предмет', readOnly: true, width: 150},
           {value: 'Учитель/Кабинет', readOnly: true, width: 180},
-          {value: 'Файлы', readOnly: true, width: 350}
+          {value: 'Файлы', readOnly: true, width: 250}
         ],
           [{value: 1}, {value: 'Математика'}, {value: ''}, {disableEvents: true, component: downloadFilesElement, forceComponent: true}],
           [{value: 2}, {value: 'Литература'}, {value: ''}, {disableEvents: true, component: downloadFilesElement, forceComponent: true}],

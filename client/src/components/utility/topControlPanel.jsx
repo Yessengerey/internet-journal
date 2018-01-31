@@ -55,7 +55,6 @@ export default class ControlPanel extends Component {
       activeButton: e.target.id
     }, () => {
       this.toggleActiveButton(this.state.activeButton, buttonIds);
-      this.props.handleViewChange(e.target.id);
     })
 
     this.props.handleViewChange(e.target.id);
