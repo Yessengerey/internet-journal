@@ -5,11 +5,23 @@ import ReactDOM from 'react-dom';
 // Material UI
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import Landing from './containers/landing/index.jsx';
 
 import StudentsParents from './containers/students/index.jsx';
 import Teachers from './containers/teachers/index.jsx';
+
+const muiTheme = getMuiTheme({
+  fontFamily: 'GothamPro Light',
+  palette: {
+    primary1Color: '#67428F',
+    primary2Color: '#67428F',
+    primary3Color: '#67428F',
+    accent1Color: '#9c61dd',
+    pickerHeaderColor: '#67428F'
+  }
+});
 
 export default class App extends Component {
   constructor(props) {
@@ -67,7 +79,7 @@ export default class App extends Component {
         break;
     }
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider muiTheme={muiTheme}>
         {mainElement}
       </MuiThemeProvider>
     )

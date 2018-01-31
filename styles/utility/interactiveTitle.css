@@ -20,4 +20,14 @@
 
 .datepicker {
   margin-left: 30px;
+  text-align: center;
+}
+
+.datepicker > div:first-child {
+  width: 150px !important;
+  text-align: center;
+}
+
+.datepicker input {
+  width: 81px !important;
 }
