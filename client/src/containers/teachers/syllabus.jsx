@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 // Custom Components
 import DataGrid from '../../components/utility/datagrid.jsx';
+import AddFilesPopup from '../../components/utility/addFilesPopup.jsx';
 
 // Material UI Components
 import DownloadIcon from 'material-ui/svg-icons/file/file-download';
@@ -44,15 +45,59 @@ export default class Syllabus extends Component {
           [{value: 19}, {value: 'Проф'}, {value: ''}, {value: ''}],
           [{value: 20}, {value: 'Проф'}, {value: ''}, {value: ''}]
       ],
-      gridTitle: 'Программа на'
+      gridTitle: 'Программа на',
+      open: false,
+      focusValue: 0,
+      classes: [
+        'Математика',
+        'Литература',
+        'Биология',
+        'Черчение',
+        'Английский',
+        'Физика',
+        'Физкультура',
+        'Казахский',
+        'Русский',
+        'География',
+        'Технологии',
+        'Искусство',
+        'История',
+        'Литература',
+        'Музыка',
+        'Химия',
+        'Французский',
+        'Проф'
+      ]
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleCloseDialog = this.handleCloseDialog.bind(this);
+    this.handleOpenDialog = this.handleOpenDialog.bind(this);
+  }
+
+  handleChange(e, index, value) {
+    this.setState({
+      focusValue: value
+    })
+  }
+
+  handleCloseDialog() {
+    this.setState({
+      open: false
+    })
+  }
+
+  handleOpenDialog() {
+    this.setState({
+      open: true
+    })
   }
 
   render() {
     return (
       <div>
         <div className={style.add_file_button_container}>
-          <div className={style.add_file_button}>
+          <div className={style.add_file_button} onClick={this.handleOpenDialog}>
             + Добавить файл
           </div>
         </div>
@@ -63,6 +108,12 @@ export default class Syllabus extends Component {
           width={'70%'}
           dropDownItems={this.props.quarters}
           data={this.state.data}/>
+        <AddFilesPopup
+          open={this.state.open}
+          classes={this.state.classes}
+          handleCloseDialog={this.handleCloseDialog}
+          focusValue={this.state.focusValue}
+          handleChange={this.handleChange}/>
       </div>
     )
   }
