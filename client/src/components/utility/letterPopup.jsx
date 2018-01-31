@@ -15,6 +15,21 @@ export default class LetterPopup extends Component {
       address: undefined,
       letterBody: undefined
     }
+
+    this.handleAddressChange = this.handleAddressChange.bind(this);
+    this.handleTextChange = this.handleTextChange.bind(this);
+  }
+
+  handleAddressChange(e) {
+    this.setState({
+      address: e.target.value
+    })
+  }
+
+  handleTextChange(e) {
+    this.setState({
+      letterBody: e.target.value
+    })
   }
 
   componentWillReceiveProps(nextProps) {
@@ -24,28 +39,41 @@ export default class LetterPopup extends Component {
   render() {
     return (
       <Dialog
-        modal={false}
+        paperClassName={style.popup_paper_container}
+        contentStyle={{width: "50%", maxWidth: "none"}}
         open={this.props.open}
-        onRequestClose={this.props.handleCloseDialog}
+        modal={true}
       >
         <div className={style.popup_inner_container}>
           <div className={style.to_title}>
             Кому
           </div>
-          <input className={style.to_input}>
+          <div className={style.to_input_container}>
+            <input className={style.to_input}
+              onChange={this.handleAddressChange}>
 
-          </input>
+            </input>
+          </div>
           <div className={style.text_title}>
             Текст
           </div>
           <textarea
             className={style.text_area}
-            maxLength={500}
+            maxLength={1000}
             rows={6}
-            cols={40}>
+            cols={40}
+            onChange={this.handleTextChange}>
           </textarea>
-          <div className={style.send_button}>
-            Отправить
+          <div className={style.actions_container}>
+            <div className={style.actions_button}>
+              Отправить
+            </div>
+            <div
+              className={style.actions_button}
+              onClick={this.props.handleCloseDialog}>
+              Закрыть
+            </div>
+
           </div>
         </div>
     </Dialog>
