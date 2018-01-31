@@ -34,7 +34,7 @@ export default class ControlPanel extends Component {
   }
 
   componentDidMount() {
-    document.getElementById(buttonIds[0]).classList.add(style.panel_button_on_active);
+    document.getElementById(this.props.viewIndex + '').classList.add(style.panel_button_on_active);
   }
 
   toggleActiveButton(id, buttonIds) {
@@ -55,6 +55,7 @@ export default class ControlPanel extends Component {
       activeButton: e.target.id
     }, () => {
       this.toggleActiveButton(this.state.activeButton, buttonIds);
+      this.props.handleViewChange(e.target.id);
     })
 
     this.props.handleViewChange(e.target.id);

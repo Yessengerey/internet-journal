@@ -34,7 +34,7 @@ export default class Teachers extends Component {
   render() {
     return (
       <div className={style.teachers_main_container}>
-        <ControlPanel handleViewChange={this.handleViewChange} handleStageChange={this.props.handleStageChange}/>
+        <ControlPanel viewIndex={this.state.currentView} handleViewChange={this.handleViewChange} handleStageChange={this.props.handleStageChange}/>
         <div className={style.teacher_name_container}><span>Петрова Мария Ивановна</span></div>
         <div style={{width: '100%'}}>
           <SwipeableViews
