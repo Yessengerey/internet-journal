@@ -120,8 +120,8 @@ export default class Messages extends Component {
     componentWillMount() {
       let mailboxHeaderElement =
         <div className={style.header_container}>
-          <div className={style.button_container} onClick={this.handleOpenDialog}>
-            <div className={style.button}>Написать</div>
+          <div className={style.button_container}>
+            <div className={style.button} onClick={this.handleOpenDialog}>Написать</div>
           </div>
           <div className={style.side_buttons_container}>
             <div className={style.inbox_pages}>1-25 из 123</div>
