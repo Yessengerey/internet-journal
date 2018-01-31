@@ -7,6 +7,7 @@ import ClassesGrid from '../../components/teachers/classesGrid.jsx';
 import StudentsGrid from '../../components/teachers/studentsGrid.jsx';
 import DataGrid from '../../components/utility/datagrid.jsx';
 import Switch from '../../components/utility/switch.jsx';
+import LetterPopup from '../../components/utility/letterPopup.jsx';
 
 // Material UI Components
 import Checkbox from 'material-ui/Checkbox';
@@ -307,32 +308,7 @@ export default class Messages extends Component {
 
                   </div>
 
-                  <Dialog
-                    modal={false}
-                    open={this.state.open}
-                    onRequestClose={this.handleCloseDialog}
-                    >
-                      <div className={style.popup_container}>
-                        <div className={style.to_title}>
-                          Кому
-                        </div>
-                        <input className={style.to_input}>
-
-                        </input>
-                        <div className={style.text_title}>
-                          Текст
-                        </div>
-                        <textarea
-                          className={style.text_area}
-                          maxLength={500}
-                          rows={6}
-                          cols={40}>
-                        </textarea>
-                        <div className={style.send_button}>
-                          Отправить
-                        </div>
-                      </div>
-                    </Dialog>
+                  <LetterPopup open={this.state.open} handleCloseDialog={this.handleCloseDialog} />
 
                   </div>
               )
