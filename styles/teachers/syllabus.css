@@ -1,3 +1,14 @@
+.download_element {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'GothamPro Regular';
+  cursor: pointer;
+  height: 100%;
+}
+
 .add_file_button_container {
   width: 100%;
   display: flex;
