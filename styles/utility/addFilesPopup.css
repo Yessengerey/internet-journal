@@ -1,0 +1,102 @@
+.popup_paper_container {
+  border-radius: 15px !important;
+}
+
+.popup_inner_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: 'GothamPro Regular';
+  padding: 10px;
+  text-align: center;
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.dropdown_outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+.dropdown_inner {
+  width: 270px;
+  /* background-color: #fdfdfd; */
+  border: 1px solid lightgrey;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.load_files_button {
+  font-family: 'GothamPro Light';
+  padding: 10px 22px;
+  margin-bottom: 40px;
+  border-radius: 11px;
+  border: 1px solid #67428F;
+  color: #67428F;
+  cursor: pointer;
+}
+
+.load_files_button:hover {
+  cursor: pointer;
+  background-color: #67428F;
+  color: white;
+}
+
+.load_files_button:active {
+  opacity: 0.5;
+}
+
+.actions_container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.actions_button {
+  width: 20%;
+  background-color: #66428f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  color: white;
+  font-family: 'GothamPro Light';
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 10px;
+  transition: box-shadow 300ms ease-out;
+}
+
+.actions_button:hover {
+  cursor: pointer;
+  /*box-shadow: 5px 5px 0px 0px #65428f63;*/
+  box-shadow: 0 0 0 6px #65428f63;
+}
+
+.actions_button:active {
+  cursor: pointer;
+  opacity: 0.5;
+  box-shadow: 0 0 0 10px #65428f63;
+}
