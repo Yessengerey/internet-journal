@@ -69,7 +69,10 @@
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
   align-items: center;
 
 }
@@ -97,6 +100,32 @@
 
 .actions_button:active {
   cursor: pointer;
+  opacity: 0.5;
+  box-shadow: 0 0 0 10px #65428f63;
+}
+
+.close_modal_button {
+  text-align: center;
+  font-family: 'GothamPro Light';
+  border-radius: 50%;
+  border: 1px solid white;
+  color: #67428F;
+  cursor: pointer;
+  transition: box-shadow 300ms ease-out;
+  padding: 10px 13px;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px #65428f63;
+}
+
+.close_modal_button svg {
+  color: #67428F;
+}
+
+.close_modal_button:hover {
+  box-shadow: 0 0 0 6px #65428f63;
+}
+
+.close_modal_button:active {
   opacity: 0.5;
   box-shadow: 0 0 0 10px #65428f63;
 }

@@ -6,6 +6,9 @@ import Dialog from 'material-ui/Dialog';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
+// Material UI Icons
+import CloseIcon from 'material-ui/svg-icons/navigation/close';
+
 // Style
 import style from '../../../../styles/utility/addFilesPopup.css';
 
@@ -57,6 +60,10 @@ export default class AddFilesModal extends Component {
 
             <div className={style.actions_button}>
               Добавить
+            </div>
+
+            <div className={style.close_modal_button} onClick={this.props.handleCloseDialog}>
+              <CloseIcon style={{height: '20px', width: 'auto', color: '#67428F'}}/>
             </div>
 
           </div>
