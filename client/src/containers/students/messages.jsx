@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import MessagesMenu from '../../components/utility/messagesMenu.jsx';
-import LetterPopup from '../../components/utility/letterPopup.jsx';
+import LetterModal from '../../components/utility/letterModal.jsx';
 
 import DataGrid from '../../components/utility/datagrid.jsx';
 import Dialog from 'material-ui/Dialog';
@@ -124,7 +124,7 @@ export default class Messages extends Component {
               </div>
             </div>
           </div>
-          <LetterPopup open={this.state.open} handleCloseDialog={this.handleCloseDialog} />
+          <LetterModal open={this.state.open} handleCloseDialog={this.handleCloseDialog} />
         </div>
     )
   }

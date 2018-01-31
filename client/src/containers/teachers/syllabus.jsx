@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 // Custom Components
 import DataGrid from '../../components/utility/datagrid.jsx';
-import AddFilesPopup from '../../components/utility/addFilesPopup.jsx';
+import AddFilesModal from '../../components/utility/addFilesModal.jsx';
 
 // Material UI Components
 import DownloadIcon from 'material-ui/svg-icons/file/file-download';
@@ -108,7 +108,7 @@ export default class Syllabus extends Component {
           width={'70%'}
           dropDownItems={this.props.quarters}
           data={this.state.data}/>
-        <AddFilesPopup
+        <AddFilesModal
           open={this.state.open}
           classes={this.state.classes}
           handleCloseDialog={this.handleCloseDialog}

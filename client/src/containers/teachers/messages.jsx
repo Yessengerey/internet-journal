@@ -7,7 +7,7 @@ import ClassesGrid from '../../components/teachers/classesGrid.jsx';
 import StudentsGrid from '../../components/teachers/studentsGrid.jsx';
 import DataGrid from '../../components/utility/datagrid.jsx';
 import Switch from '../../components/utility/switch.jsx';
-import LetterPopup from '../../components/utility/letterPopup.jsx';
+import LetterModal from '../../components/utility/letterModal.jsx';
 
 // Material UI Components
 import Checkbox from 'material-ui/Checkbox';
@@ -308,7 +308,7 @@ export default class Messages extends Component {
 
                   </div>
 
-                  <LetterPopup open={this.state.open} handleCloseDialog={this.handleCloseDialog} />
+                  <LetterModal open={this.state.open} handleCloseDialog={this.handleCloseDialog} />
 
                   </div>
               )

@@ -7,7 +7,7 @@ import Dialog from 'material-ui/Dialog';
 // Style
 import style from '../../../../styles/utility/letterPopup.css';
 
-export default class LetterPopup extends Component {
+export default class LetterModal extends Component {
   constructor(props) {
     super(props);
 

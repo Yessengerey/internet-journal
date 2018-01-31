@@ -9,7 +9,7 @@ import MenuItem from 'material-ui/MenuItem';
 // Style
 import style from '../../../../styles/utility/addFilesPopup.css';
 
-export default class LetterPopup extends Component {
+export default class AddFilesModal extends Component {
   constructor(props) {
     super(props);
 
