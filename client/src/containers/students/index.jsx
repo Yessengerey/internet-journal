@@ -34,7 +34,7 @@ export default class StudentsParents extends Component {
   render() {
     return (
       <div className={style.students_main_container}>
-        <ControlPanel handleViewChange={this.handleViewChange} handleStageChange={this.props.handleStageChange}/>
+        <ControlPanel viewIndex={this.state.currentView} handleViewChange={this.handleViewChange} handleStageChange={this.props.handleStageChange}/>
         <div style={{width: '100%'}}>
           <SwipeableViews
             index={this.state.currentView}
